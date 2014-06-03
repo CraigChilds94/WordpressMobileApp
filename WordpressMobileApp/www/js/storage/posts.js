@@ -60,6 +60,7 @@ var Posts = function(callback) {
 	 * @return String  		A string format of the json encoded data
 	 */
 	this._reload = function() {
+		console.log("reloading posts");
 		var posts;
 		$.ajaxSetup({'async' : false});
 		$.getJSON(url, function(data) {
@@ -70,6 +71,7 @@ var Posts = function(callback) {
 	}
 
 	// Wait until the posts have been retrieved before calling the callback.
+	this._reload();
 	this.posts = this._getPosts();
 	this.callLater(callback);
 };

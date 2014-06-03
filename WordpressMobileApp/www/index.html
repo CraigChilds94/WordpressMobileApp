@@ -7,14 +7,14 @@
 
 		<!-- Include the compiled Ratchet CSS -->
 		<link href="css/ratchet.min.css" rel="stylesheet">
+		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body>
 
-	<!-- Define the home view template -->
+		<!-- Define the home view template -->
 		<script id="home-tpl" type="text/x-handlebars-template">
 			<div class='header'>
 				<header class="bar bar-standard bar-nav">
-					<a class="icon pull-right icon-refresh refresh"></a>
 					<h1 class="title">{{title}}</h1>
 				</header>
 				<div class="content">
@@ -22,7 +22,7 @@
 						{{#each posts}}
 							<li class="table-view-cell media">
 								<a class="navigate-right" href="#post{{id}}">
-									<img class="media-object pull-left" width="42" height="42" src="{{thumbnail}}">
+									<img class="media-object post-head" src="{{thumbnail}}">
 									<div class="media-body">
 										{{title}}
 										<p>{{{excerpt}}}</p>
@@ -53,7 +53,7 @@
 		<script src="cordova.js"></script>
 
 		<!-- libs -->
-		<script src="lib/jquery-1.8.2.min.js"></script>
+		<script src="lib/jquery.js"></script>
 		<script src="js/storage/posts.js"></script>
 		<script src="lib/handlebars.js"></script>
 		

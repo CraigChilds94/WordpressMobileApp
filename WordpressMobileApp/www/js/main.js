@@ -11,9 +11,7 @@ var app = {
 		this.detailsUrl = /^#post(\d+)/;
 		this.registerEvents();
 
-		this.store = new Posts(function() {
-			$('body').html(new HomeView(app.store).render().el);
-		});
+		this.store = this._getStore();
 	},
 	
 	/**
@@ -33,6 +31,9 @@ var app = {
 	 * Setup which events we're listening out for
 	 */
 	registerEvents: function() {
+		document.addEventListener("offline", onOffline, false);
+		document.addEventListener("backbutton", onBackPressed, false);
+
 		$(window).on('hashchange', $.proxy(this.route, this));
 
 		// Check of browser supports touch events...
@@ -44,6 +45,7 @@ var app = {
 			$('body').on('touchend', 'a', function(event) {
 				$(event.target).removeClass('tappable-active');
 			});
+
 		} else {
 			// ... if not: register mouse events instead
 			$('body').on('mousedown', 'a', function(event) {
@@ -63,7 +65,7 @@ var app = {
 		var hash = window.location.hash;
 
 		if(!hash) {
-			$('body').html(new HomeView(this.store).render().el);
+			$('body').html(new HomeView(this._getStore()).render().el);
 			$('.content').hide().fadeIn();
 			return;
 		}
@@ -74,6 +76,31 @@ var app = {
 				$('body').html(new PostView(post).render().el);
 				$('.content').hide().fadeIn();
 			});
+		}
+	},
+
+	/**
+	 * Retrieve a fresh copy of the posts
+	 */
+	_getStore: function() {
+		return new Posts(function() {
+			$('body').html(new HomeView(app.store).render().el);
+		});
+	},
+
+	/**
+	 * What happens when the device is offline
+	 */
+	onOffline: function() {
+		this.showAlert("You are not connected to the internet!", "No Internet");
+	},
+
+	/**
+	 * When the device's back button is pressed
+	 */
+	onBackPressed: function() {
+		if(window.location.hash != "") {
+			window.location.hash = "";
 		}
 	}
 
