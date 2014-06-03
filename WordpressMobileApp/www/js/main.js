@@ -7,13 +7,16 @@ var app = {
 	/**
 	 * What happens upon the loading of the app
 	 */
-	initialize: function() {
+	init: function(callback) {
+		window.location.hash = "";
 		this.detailsUrl = /^#post(\d+)/;
 		this.registerEvents();
 
 		this.store = new Posts(function() {
 			$('body').html(new HomeView(app.store).render().el);
 		});
+
+		callback();
 	},
 	
 	/**
@@ -35,6 +38,7 @@ var app = {
 	registerEvents: function() {
 		document.addEventListener("offline", this.onOffline, false);
 		document.addEventListener("backbutton", this.onBackPressed, false);
+		document.addEventListener("deviceready", this.onDeviceReady, false);
 
 		// Handle routes
 		$(window).on('hashchange', $.proxy(this.route, this));
@@ -76,9 +80,14 @@ var app = {
 		if(window.location.hash != "") {
 			window.location.hash = "";
 		}
+	},
+
+	/**	
+	 * Called when the device is ready
+	 */
+	onDeviceReady: function() {
+		console.log("devide ready");
 	}
 
 };
-
-app.initialize();
 
