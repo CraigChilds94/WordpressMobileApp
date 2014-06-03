@@ -23,12 +23,17 @@ var HomeView = function(store) {
 				posts: store.posts
 			}
 		));
-		
+
 		return this;
 	};
 
 	this.initialize();
 }
+
+// We want to reduce the size of the excerpt as it's possible to be too large
+Handlebars.registerHelper('formatExcerpt', function(a) {
+  return new Handlebars.SafeString(a.substring(0, 152) + "[...]");
+});
 
 // Attach the templates
 HomeView.template = Handlebars.compile($('#home-tpl').html());
