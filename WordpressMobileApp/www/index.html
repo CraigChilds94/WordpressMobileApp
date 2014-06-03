@@ -17,21 +17,21 @@
 				<header class="bar bar-standard bar-nav">
 					<h1 class="title">{{title}}</h1>
 				</header>
-				<div class="content">
-					<ul class='post-list table-view'>
-						{{#each posts}}
-							<li class="table-view-cell media post-item" style="background-image: url({{thumbnail}})">
-								<a class="navigate-right" href="#post{{id}}">
-									<!--<img class="media-object post-head" src="{{thumbnail}}">-->
-									<div class="media-body">
-										{{title}}
-										<p>{{{excerpt}}}</p>
-									</div>
-								</a>
-							</li>
-						{{/each}}
-					</ul>
-				</div>
+			</div>
+			<div class="content">
+				<ul class='post-list table-view'>
+					{{#each posts}}
+						<li class="table-view-cell media post-item" style="background-image: url({{thumbnail}})">
+							<a class="navigate-right" href="#post{{id}}">
+								<!--<img class="media-object post-head" src="{{thumbnail}}">-->
+								<div class="media-body">
+									{{title}}
+									<p>{{{excerpt}}}</p>
+								</div>
+							</a>
+						</li>
+					{{/each}}
+				</ul>
 			</div>
 		</script>
 
@@ -39,7 +39,7 @@
 		<script id="post-tpl" type="text/x-handlebars-template">
 			<div class='header'>
 				<header class="bar bar-standard bar-nav">
-					<a href="#" class="icon icon-left-nav pull-left"></a>
+					<a href="#" class="icon icon-left-nav btn-nav pull-left back"></a>
 					<h1 class="title">{{title}}</h1>
 				</header>
 				<div class="content">
