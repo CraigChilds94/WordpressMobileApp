@@ -1,0 +1,660 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"call",
+				"callback"
+			],
+			[
+				"pos",
+				"postsEl"
+			],
+			[
+				"Home",
+				"HomeView"
+			],
+			[
+				"head",
+				"header"
+			],
+			[
+				"Hom",
+				"HomeView"
+			],
+			[
+				"home",
+				"homeTemplate"
+			],
+			[
+				"post",
+				"postsUrl"
+			],
+			[
+				"ti",
+				"title"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"template",
+				"templates"
+			],
+			[
+				"array_m",
+				"array_merge"
+			],
+			[
+				"mi",
+				"min-width"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"paddin",
+				"padding-right"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"text",
+				"text-decoration"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 237,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "WordpressMobileApp/www/js/main.js",
+			"settings":
+			{
+				"buffer_size": 848,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "WordpressMobileApp/www/js/storage/posts.js",
+			"settings":
+			{
+				"buffer_size": 1353,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "WordpressMobileApp/www/js/HomeView.js",
+			"settings":
+			{
+				"buffer_size": 441,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "WordpressMobileApp/www/index.html",
+			"settings":
+			{
+				"buffer_size": 1714,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "WordpressMobileApp/platforms/android/ant-gen/com/tannwestlake/wpmobile/R.java",
+			"settings":
+			{
+				"buffer_size": 624,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "WordpressMobileApp/platforms/android/ant-build/WordpressMobileApp-release-unsigned.apk",
+			"settings":
+			{
+				"buffer_size": 5601967,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "WordpressMobileApp/www/js/PostView.js",
+			"settings":
+			{
+				"buffer_size": 322,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "WordpressMobileApp/www/css/styles.css",
+			"settings":
+			{
+				"buffer_size": 3755,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "WordpressMobileApp/config.xml",
+			"settings":
+			{
+				"buffer_size": 530,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib2,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); os.makedirs( ipp ) if not os.path.exists(ipp) else None; urllib2.install_opener( urllib2.build_opener( urllib2.ProxyHandler()) ); by = urllib2.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); open( os.path.join( ipp, pf), 'wb' ).write(by) if dh == h else None; print('Error validating download (got %s instead of %s), please try manual install' % (dh, h) if dh != h else 'Please restart Sublime Text to finish installation')"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/www/js/main.js",
+		"/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/www/js/storage/memory-store.js",
+		"/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/www/js/index.js",
+		"/Users/craig/Projects/mobile-app/myblog/plugins/ios.json",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/templates/index.html",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/js/index.js",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/templates/about.html",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/index.html",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/templates/settings.html",
+		"/Users/craig/Documents/signature",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/templates/partials/bar.html",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/js/app.js",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/js/require.js",
+		"/Users/craig/Downloads/starter-kit-1.5.1/js/app.js",
+		"/Users/craig/Downloads/starter-kit-1.5.1/js/libs/handlebars-1.1.2.js",
+		"/Users/craig/Downloads/starter-kit-1.5.1/js/libs/ember-1.5.1.js",
+		"/Users/craig/Downloads/starter-kit-1.5.1/js/libs/jquery-1.10.2.js",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/js/framework/app.js",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/phonegap.js",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/css/ratchet-theme-ios.min.css",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/spec.html",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/js/jquery-mobile.js",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/js/jquery.js",
+		"/Users/craig/Projects/mobile-app/mobile-app/www/config.xml",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/inc/page.php",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/footer.php",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/lib/bodyClasses.php",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/lib/_config.php",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/functions.php",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/lib/Templater/templates/partials/text.php",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/single.php",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/header.php",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/index.php",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/lib/Templater/readme.md",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/lib/helpers.php",
+		"/Users/craig/Projects/wp/wp-content/themes/wp-boilerplate/lib/wpSpecific.php",
+		"/Users/craig/Downloads/index 2.html",
+		"/Users/craig/Downloads/index.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"echo",
+			"nav",
+			"nav-wrap",
+			"heading",
+			"wrap"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$return .= "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 6,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								237,
+								237
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "WordpressMobileApp/www/js/main.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 848,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								848,
+								848
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "WordpressMobileApp/www/js/storage/posts.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1353,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								544,
+								544
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "WordpressMobileApp/www/js/HomeView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 441,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								326,
+								326
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "WordpressMobileApp/www/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1714,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								870,
+								870
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 73.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "WordpressMobileApp/platforms/android/ant-gen/com/tannwestlake/wpmobile/R.java",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 624,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Java/Java.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "WordpressMobileApp/platforms/android/ant-build/WordpressMobileApp-release-unsigned.apk",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 5601967,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "WordpressMobileApp/www/js/PostView.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 322,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								217,
+								217
+							]
+						],
+						"settings":
+						{
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "WordpressMobileApp/www/css/styles.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3755,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3714,
+								3714
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2068.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "WordpressMobileApp/config.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 530,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								530,
+								530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "wp-mobile.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 482.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
