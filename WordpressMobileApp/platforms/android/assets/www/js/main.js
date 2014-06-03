@@ -15,7 +15,7 @@ var app = {
 		this.store = new Posts(function() {
 			$('body').html(new HomeView(app.store).render().el);
 		});
-
+		
 		callback();
 	},
 	
@@ -54,8 +54,6 @@ var app = {
 		if(!hash) {
 			$('body').html(new HomeView(this.store).render().el);
 			$('.content').hide().fadeIn();
-			//$('.content').hide().slideToggle("slow");
-			//$('.content').hide().toggle("slide", {direction:"up"}, 200);
 			return;
 		}
 
@@ -64,8 +62,6 @@ var app = {
 			app.store.getById(Number(match[1]), function(post) {
 				$('body').html(new PostView(post).render().el);
 				$('.content').hide().fadeIn();
-				//$('.content').hide().slideToggle("slow");
-				//$('.content').hide().toggle("slide", {direction:"down"}, 200);
 			});
 		}
 	},

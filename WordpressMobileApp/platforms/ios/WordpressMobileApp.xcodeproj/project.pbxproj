@@ -39,6 +39,8 @@
 		7E7966E71810823500FA85AD /* icon-small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E7966DD1810823500FA85AD /* icon-small@2x.png */; };
 		D4A0D8761607E02300AEF8BB /* Default-568h@2x~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = D4A0D8751607E02300AEF8BB /* Default-568h@2x~iphone.png */; };
 		9EA6704DAD884BC1A4A62ED0 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = DEDF1B32EA4B4FE9A8133600 /* CDVStatusBar.m */; };
+		B14A6626E6C64F088CF86E58 /* CDVDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 615F3E7EF4354F009A17B34B /* CDVDevice.m */; };
+		2D5E05E66D1F4962B3AA5868 /* APPLocalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 6E1A32C8A8E24DC191886989 /* APPLocalNotification.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +107,10 @@
 		F840E1F0165FE0F500CFE078 /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = WordpressMobileApp/config.xml; sourceTree = "<group>"; };
 		DEDF1B32EA4B4FE9A8133600 /* CDVStatusBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVStatusBar.m"; path = "org.apache.cordova.statusbar/CDVStatusBar.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		AA4BFFBED0604BC7AA15E74D /* CDVStatusBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVStatusBar.h"; path = "org.apache.cordova.statusbar/CDVStatusBar.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		615F3E7EF4354F009A17B34B /* CDVDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVDevice.m"; path = "org.apache.cordova.device/CDVDevice.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		24230F42018546E8830A1D1E /* CDVDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVDevice.h"; path = "org.apache.cordova.device/CDVDevice.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		6E1A32C8A8E24DC191886989 /* APPLocalNotification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "APPLocalNotification.m"; path = "de.appplant.cordova.plugin.local-notification/APPLocalNotification.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		31CD32B9A3D94F299CB9DF7F /* APPLocalNotification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "APPLocalNotification.h"; path = "de.appplant.cordova.plugin.local-notification/APPLocalNotification.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,6 +233,10 @@
 			children = (
 				DEDF1B32EA4B4FE9A8133600 /* CDVStatusBar.m */,
 				AA4BFFBED0604BC7AA15E74D /* CDVStatusBar.h */,
+				615F3E7EF4354F009A17B34B /* CDVDevice.m */,
+				24230F42018546E8830A1D1E /* CDVDevice.h */,
+				6E1A32C8A8E24DC191886989 /* APPLocalNotification.m */,
+				31CD32B9A3D94F299CB9DF7F /* APPLocalNotification.h */,
 			);
 			name = Plugins;
 			path = WordpressMobileApp/Plugins;
@@ -422,6 +432,8 @@
 				1D3623260D0F684500981E51 /* AppDelegate.m in Sources */,
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				9EA6704DAD884BC1A4A62ED0 /* CDVStatusBar.m in Sources */,
+				B14A6626E6C64F088CF86E58 /* CDVDevice.m in Sources */,
+				2D5E05E66D1F4962B3AA5868 /* APPLocalNotification.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

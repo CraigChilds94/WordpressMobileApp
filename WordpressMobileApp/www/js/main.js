@@ -15,7 +15,8 @@ var app = {
 		this.store = new Posts(function() {
 			$('body').html(new HomeView(app.store).render().el);
 		});
-
+		
+		window.plugin.notification.local.add({ message: 'Great app!' });
 		callback();
 	},
 	
