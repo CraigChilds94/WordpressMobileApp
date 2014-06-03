@@ -55,33 +55,33 @@ This enables the injection of data, which can be pre-processed and displayed con
 
 ####Example
 Here is an example view, this uses ratchet for basic mobile supported styling. A ```posts``` array is passed to this view and is iterated over using handlebars.
-```
+```js
 <script id="home-tpl" type="text/x-handlebars-template">
-			<div class='header'>
-				<header class="bar bar-standard bar-nav">
-					<h1 class="title">{{title}}</h1>
-				</header>
-				<div class="content wrap">
-					<ul class='post-list table-view'>
-						{{#each posts}}
-							<li class="table-view-cell media post-item" style="background-image: url({{thumbnail}})">
-								<a class="navigate-right" href="#post{{id}}">
-									<div class="media-body">
-										{{title}}
-										<p>{{{formatExcerpt excerpt}}}</p>
-									</div>
-								</a>
-							</li>
-						{{/each}}
-					</ul>
-				</div>
-			</div>
-		</script>
+	<div class='header'>
+		<header class="bar bar-standard bar-nav">
+			<h1 class="title">{{title}}</h1>
+		</header>
+		<div class="content wrap">
+			<ul class='post-list table-view'>
+				{{#each posts}}
+					<li class="table-view-cell media post-item" style="background-image: url({{thumbnail}})">
+						<a class="navigate-right" href="#post{{id}}">
+							<div class="media-body">
+								{{title}}
+								<p>{{{formatExcerpt excerpt}}}</p>
+							</div>
+						</a>
+					</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+</script>
 ```
 
 I also define a view object, like in this example there is a standard layout.
 
-```
+```js
 /**
  * Home view object
  * @param MemoryStore store Local storage object
