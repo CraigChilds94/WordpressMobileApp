@@ -14,6 +14,7 @@
 		<script id="home-tpl" type="text/x-handlebars-template">
 			<div class='header'>
 				<header class="bar bar-standard bar-nav">
+					<a class="icon pull-right icon-refresh refresh"></a>
 					<h1 class="title">{{title}}</h1>
 				</header>
 				<div class="content">
@@ -21,7 +22,7 @@
 						{{#each posts}}
 							<li class="table-view-cell media">
 								<a class="navigate-right" href="#post{{id}}">
-									<img class="media-object pull-left" src="http://placehold.it/42x42">
+									<img class="media-object pull-left" width="42" height="42" src="{{thumbnail}}">
 									<div class="media-body">
 										{{title}}
 										<p>{{{excerpt}}}</p>
@@ -38,21 +39,23 @@
 		<script id="post-tpl" type="text/x-handlebars-template">
 			<div class='header'>
 				<header class="bar bar-standard bar-nav">
+					<a href="#" class="icon icon-left-nav pull-left"></a>
 					<h1 class="title">{{title}}</h1>
 				</header>
 				<div class="content content-padded">
+					<img src="{{thumbnail}}">
 					{{{content}}}
 				</div>
 			</div>
 		</script>
 
+		<!-- include cordova -->
+		<script src="cordova.js"></script>
+
 		<!-- libs -->
 		<script src="lib/jquery-1.8.2.min.js"></script>
 		<script src="js/storage/posts.js"></script>
 		<script src="lib/handlebars.js"></script>
-
-		<!-- Include the compiled Ratchet JS -->
-		<script src="js/ratchet.min.js"></script>
 		
 		<!-- views -->
 		<script src="js/HomeView.js"></script>

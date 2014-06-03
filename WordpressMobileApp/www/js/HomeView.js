@@ -4,10 +4,18 @@
  */
 var HomeView = function(store) {
 
+	/**
+	 * Called upon init of this View
+	 * @return Object  	this
+	 */
 	this.initialize = function() {
 		this.el = $('<div/>');
 	};
 
+	/**
+	 * Display the compiled Handlebars View
+	 * @return Object  	this
+	 */
 	this.render = function() {
 		this.el.html(HomeView.template(
 			{
