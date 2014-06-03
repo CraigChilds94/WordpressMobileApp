@@ -7,11 +7,16 @@ var app = {
 	/**
 	 * What happens upon the loading of the app
 	 */
-	initialize: function() {
+	init: function(callback) {
+		window.location.hash = "";
 		this.detailsUrl = /^#post(\d+)/;
 		this.registerEvents();
 
-		this.store = this._getStore();
+		this.store = new Posts(function() {
+			$('body').html(new HomeView(app.store).render().el);
+		});
+
+		callback();
 	},
 	
 	/**
@@ -33,6 +38,7 @@ var app = {
 	registerEvents: function() {
 		document.addEventListener("offline", this.onOffline, false);
 		document.addEventListener("backbutton", this.onBackPressed, false);
+		document.addEventListener("deviceready", this.onDeviceReady, false);
 
 		// Handle routes
 		$(window).on('hashchange', $.proxy(this.route, this));
@@ -46,8 +52,10 @@ var app = {
 		var hash = window.location.hash;
 
 		if(!hash) {
-			$('body').html(new HomeView(this._getStore()).render().el);
+			$('body').html(new HomeView(this.store).render().el);
 			$('.content').hide().fadeIn();
+			//$('.content').hide().slideToggle("slow");
+			//$('.content').hide().toggle("slide", {direction:"up"}, 200);
 			return;
 		}
 
@@ -56,17 +64,10 @@ var app = {
 			app.store.getById(Number(match[1]), function(post) {
 				$('body').html(new PostView(post).render().el);
 				$('.content').hide().fadeIn();
+				//$('.content').hide().slideToggle("slow");
+				//$('.content').hide().toggle("slide", {direction:"down"}, 200);
 			});
 		}
-	},
-
-	/**
-	 * Retrieve a fresh copy of the posts
-	 */
-	_getStore: function() {
-		return new Posts(function() {
-			$('body').html(new HomeView(app.store).render().el);
-		});
 	},
 
 	/**
@@ -83,9 +84,14 @@ var app = {
 		if(window.location.hash != "") {
 			window.location.hash = "";
 		}
+	},
+
+	/**	
+	 * Called when the device is ready
+	 */
+	onDeviceReady: function() {
+		console.log("devide ready");
 	}
 
 };
-
-app.initialize();
 

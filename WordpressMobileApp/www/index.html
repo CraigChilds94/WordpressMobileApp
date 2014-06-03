@@ -10,22 +10,20 @@
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body>
-
 		<!-- Define the home view template -->
 		<script id="home-tpl" type="text/x-handlebars-template">
 			<div class='header'>
 				<header class="bar bar-standard bar-nav">
 					<h1 class="title">{{title}}</h1>
 				</header>
-				<div class="content">
+				<div class="content wrap">
 					<ul class='post-list table-view'>
 						{{#each posts}}
 							<li class="table-view-cell media post-item" style="background-image: url({{thumbnail}})">
 								<a class="navigate-right" href="#post{{id}}">
-									<!--<img class="media-object post-head" src="{{thumbnail}}">-->
 									<div class="media-body">
 										{{title}}
-										<p>{{{excerpt}}}</p>
+										<p>{{{formatExcerpt excerpt}}}</p>
 									</div>
 								</a>
 							</li>
@@ -34,7 +32,6 @@
 				</div>
 			</div>
 		</script>
-
 		<!-- Define the post view template -->
 		<script id="post-tpl" type="text/x-handlebars-template">
 			<div class='header'>
@@ -42,9 +39,9 @@
 					<a href="#" class="icon icon-left-nav btn-nav pull-left back"></a>
 					<h1 class="title">{{title}}</h1>
 				</header>
-				<div class="content">
-					<img src="{{thumbnail}}">
-					<div class="content-padded">
+				<div class="content wrap">
+					<img class="hero" src="{{thumbnail}}">
+					<div class="content-padded post-page">
 						{{{content}}}
 					</div>
 				</div>
@@ -56,6 +53,7 @@
 
 		<!-- libs -->
 		<script src="lib/jquery.js"></script>
+		<script src="lib/jquery-ui.js"></script>
 		<script src="js/storage/posts.js"></script>
 		<script src="lib/handlebars.js"></script>
 		
@@ -65,6 +63,10 @@
 		
 		<!-- logic -->
 		<script src="js/main.js"></script>
+
+		<script type="text/javascript">
+			app.init(function(){});
+		</script>
 
 	</body>
 </html>
