@@ -3,10 +3,16 @@
  */
 var PostView = function() {
 
+	/**
+	 * Called upon init of this view
+	 */
 	this.initialize = function() {
 		this.el = $('<div/>');
 	};
 
+	/**
+	 * Render the view from the compiled template
+	 */
 	this.render = function() {
 		this.el.html(PostView.template(post));
 		return this;
@@ -15,4 +21,5 @@ var PostView = function() {
 	this.initialize();
 }
 
+// Compile the template
 PostView.template = Handlebars.compile($('#post-tpl').html());

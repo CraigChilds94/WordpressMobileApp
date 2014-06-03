@@ -1,4 +1,12 @@
+/**
+ * Main Application Controller
+ * @type Object
+ */
 var app = {
+
+	/**
+	 * What happens upon the loading of the app
+	 */
 	initialize: function() {
 		this.detailsUrl = /^#post(\d+)/;
 		this.registerEvents();
@@ -8,6 +16,11 @@ var app = {
 		});
 	},
 	
+	/**
+	 * Show a native alert or a web version if not supported
+	 * @param  String 	message 	The message in the alert
+	 * @param  String	title   	The title of the alert
+	 */
 	showAlert: function (message, title) {
 		if (navigator.notification) {
 			navigator.notification.alert(message, null, title, 'OK');
@@ -16,29 +29,21 @@ var app = {
 		}
 	},
 
+	/**
+	 * Setup which events we're listening out for
+	 */
 	registerEvents: function() {
-		$(window).on('hashchange', $.proxy(this.route, this));
+		document.addEventListener("offline", this.onOffline, false);
+		document.addEventListener("backbutton", this.onBackPressed, false);
 
-		// Check of browser supports touch events...
-		if (document.documentElement.hasOwnProperty('ontouchstart')) {
-			// ... if yes: register touch event listener to change the "selected" state of the item
-			$('body').on('touchstart', 'a', function(event) {
-				$(event.target).addClass('tappable-active');
-			});
-			$('body').on('touchend', 'a', function(event) {
-				$(event.target).removeClass('tappable-active');
-			});
-		} else {
-			// ... if not: register mouse events instead
-			$('body').on('mousedown', 'a', function(event) {
-				$(event.target).addClass('tappable-active');
-			});
-			$('body').on('mouseup', 'a', function(event) {
-				$(event.target).removeClass('tappable-active');
-			});
-		}
+		// Handle routes
+		$(window).on('hashchange', $.proxy(this.route, this));
 	},
 
+	/**
+	 * Handle some application routes, we need to know what
+	 * we're looking out for
+	 */
 	route: function() {
 		var hash = window.location.hash;
 
@@ -55,8 +60,25 @@ var app = {
 				$('.content').hide().fadeIn();
 			});
 		}
+	},
+
+	/**
+	 * What happens when the device is offline
+	 */
+	onOffline: function() {
+		this.showAlert("You are not connected to the internet!", "No Internet");
+	},
+
+	/**
+	 * When the device's back button is pressed
+	 */
+	onBackPressed: function() {
+		if(window.location.hash != "") {
+			window.location.hash = "";
+		}
 	}
 
 };
 
 app.initialize();
+

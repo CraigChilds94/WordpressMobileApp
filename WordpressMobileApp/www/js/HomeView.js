@@ -19,7 +19,7 @@ var HomeView = function(store) {
 	this.render = function() {
 		this.el.html(HomeView.template(
 			{
-				title: "Wordpress Mobile App",
+				title: "Craig's Blog",
 				posts: store.posts
 			}
 		));

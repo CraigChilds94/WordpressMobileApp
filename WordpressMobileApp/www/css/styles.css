@@ -1,4 +1,47 @@
+body {
+	background-color: #000;
+}
+
+* {
+	border: none;
+	color: #fff;
+}
+
+.icon {
+	color: #7df16a;
+}
+
+.bar-nav {
+	background: #363636;
+	border: none;
+}
+
+	.bar-nav h1 {
+		color: #7df16a;
+	}
+
+.content {
+	background: #222;
+}
+
 img.post-head {
 	display: inline-block;
 	width: 100%;
 }
+
+.post-list {
+	border: none;
+}
+
+.post-item {
+	background: #202020;
+	border: none;
+	background-repeat: no-repeat;
+	background-position: center top;
+}
+
+	.post-item a .media-body{
+		color: #000;
+		background-color: #fff;
+		padding: 10px;
+	}
