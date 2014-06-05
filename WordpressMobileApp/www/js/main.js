@@ -10,6 +10,11 @@ var app = {
 	init: function(callback) {
 		window.location.hash = "";
 		this.detailsUrl = /^#post(\d+)/;
+
+		this.routes = [
+			{ name: "post", pattern : /^#post(\d+)/ }
+		];
+
 		this.registerEvents();
 
 		this.store = new Posts(function() {
@@ -50,21 +55,18 @@ var app = {
 	 * we're looking out for
 	 */
 	route: function() {
-		var hash = window.location.hash;
-
-		if(!hash) {
-			$('body').html(new HomeView(this.store).render().el);
+		new Router(this.store, this.routes).run({
+			index : function(data) {
+				$('body').html(new HomeView(data.store).render().el);
+			},
+			post: function(data) {
+				data.store.getById(Number(data.match[1]), function(post) {
+					$('body').html(new PostView(post).render().el);
+				});
+			}
+		}, function(router) {
 			$('.content').hide().fadeIn();
-			return;
-		}
-
-		var match = hash.match(app.detailsUrl);
-		if(match) {
-			app.store.getById(Number(match[1]), function(post) {
-				$('body').html(new PostView(post).render().el);
-				$('.content').hide().fadeIn();
-			});
-		}
+		});
 	},
 
 	/**
