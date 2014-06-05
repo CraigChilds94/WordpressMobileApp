@@ -7,22 +7,17 @@ var app = {
 	/**
 	 * What happens upon the loading of the app
 	 */
-	init: function(callback) {
+	init: function() {
 		window.location.hash = "";
-		this.detailsUrl = /^#post(\d+)/;
-
-		this.routes = [
-			{ name: "post", pattern: /^#post(\d+)/ },
-			{ name: "settings", pattern: /#(sett)/ }
-		];
-
 		this.registerEvents();
 
 		this.store = new DataStore(function() {
+			// Could load a splash screen here, or some
+			// guide screen?
+			
+			// Load default page
 			$('body').html(new HomeView(app.store).render().el);
 		});
-		
-		callback();
 	},
 	
 	/**
@@ -55,9 +50,12 @@ var app = {
 	 * we're looking out for
 	 */
 	route: function() {
-		console.log(window.plugin.local);
-		window.plugin.notification.local.add({ message: 'Great app!' });
-		new Router(this.store, this.routes).run({
+		var routes = [
+			{ name: "post", pattern: /^#post(\d+)/ },
+			{ name: "settings", pattern: /#(sett)/ }
+		];
+
+		new Router(this.store, routes).run({
 			index : function(data) {
 				$('body').html(new HomeView(data.store).render().el);
 			},
@@ -67,7 +65,16 @@ var app = {
 				});
 			},
 			settings: function(data) {
-				$('body').html(new SettingsView(data.store).render().el);
+				settingsview = new SettingsView(data.store);
+				$('body').html(settingsview.render().el);
+
+				$('.save-button').on('click', function(e) {
+					data.store.saveSettings($('.settings input'), function() {
+						app.showAlert("Your settings have been saved to the device.", "Settings Saved");
+					});
+					
+					return false;
+				});
 			}
 		}, function(router) {
 			$('.content').hide().fadeIn();
@@ -85,8 +92,12 @@ var app = {
 	 * When the device's back button is pressed
 	 */
 	onBackPressed: function() {
+		// Go back to the main page, can configure to
+		// work with different app hierarchies.
 		if(window.location.hash != "") {
 			window.location.hash = "";
+		} else {
+			navigator.app.exitApp();
 		}
 	},
 

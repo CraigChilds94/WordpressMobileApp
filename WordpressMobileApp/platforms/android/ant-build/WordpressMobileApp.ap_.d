@@ -54,8 +54,8 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/SettingsView.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/storage \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/storage/datastore.js \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/lib/hammer.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/lib/handlebars.js \
-/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/lib/jquery-ui.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/lib/jquery.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/de.appplant.cordova.plugin.local-notification \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.device \

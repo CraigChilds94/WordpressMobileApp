@@ -9,7 +9,7 @@
 		<link href="css/ratchet.min.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
-	<body>
+	<body id="body">
 		<!-- Define the home view template -->
 		<script id="home-tpl" type="text/x-handlebars-template">
 			<div class='header'>
@@ -57,9 +57,12 @@
 					<a href="#" class="icon icon-left-nav btn-nav pull-left back"></a>
 					<h1 class="title">{{title}}</h1>
 				</header>
-				<div class="content wrap">
-					<div class="content-padded post-page">
-						<p>Hello world</p>
+					<div class="content">
+						<form class="input-group settings">
+							<input type="text" name="update_freq" placeholder="Enter how often the feed is updated, in minutes.">
+						</form>
+						<div class="content-padded">
+						<button class="btn btn-positive btn-block save-button">Save settings</button>
 					</div>
 				</div>
 			</div>
@@ -70,7 +73,6 @@
 
 		<!-- libs -->
 		<script src="lib/jquery.js"></script>
-		<script src="lib/jquery-ui.js"></script>
 		<script src="js/storage/datastore.js"></script>
 		<script src="lib/handlebars.js"></script>
 		
@@ -86,8 +88,7 @@
 		<script src="js/main.js"></script>
 
 		<script type="text/javascript">
-			app.init(function(){
-			});
+			app.init(function(){});
 		</script>
 
 	</body>

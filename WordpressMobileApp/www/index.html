@@ -58,36 +58,11 @@
 					<h1 class="title">{{title}}</h1>
 				</header>
 					<div class="content">
-						<form class="input-group">
-							<input type="text" placeholder="Full name">
-							<input type="email" placeholder="Email">
-							<input type="text" placeholder="Username">
+						<form class="input-group settings">
+							<input type="text" name="update_freq" placeholder="Enter how often the feed is updated, in minutes.">
 						</form>
-
-						<h5 class="content-padded">App settings</h5>
-
-						<ul class="table-view">
-							<li class="table-view-cell media">
-								<span class="media-object pull-left icon icon-sound"></span>
-								<div class="media-body">
-								Enable sounds
-								</div>
-								<div class="toggle active">
-								<div class="toggle-handle" style="-webkit-transform: translate3d(44px, 0px, 0px);"></div>
-								</div>
-							</li>
-							<li class="table-view-cell media">
-								<span class="media-object pull-left icon icon-person"></span>
-								<div class="media-body">
-								Parental controls
-								</div>
-								<div class="toggle">
-								<div class="toggle-handle" style="-webkit-transform: translate3d(0px, 0px, 0px);"></div>
-								</div>
-							</li>
-						</ul>
 						<div class="content-padded">
-						<button class="btn btn-positive btn-block">Save settings</button>
+						<button class="btn btn-positive btn-block save-button">Save settings</button>
 					</div>
 				</div>
 			</div>
@@ -113,7 +88,7 @@
 		<script src="js/main.js"></script>
 
 		<script type="text/javascript">
-			app.init(function(){});
+			app.init();
 		</script>
 
 	</body>
