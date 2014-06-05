@@ -6,7 +6,7 @@ A template for a HTML5 mobile app, using cordova which integrates a Wordpress fe
 This can be customised to offer new functionality, not only limited to the intergration of a Wordpress feed.
 
 #####Architecture
-[link here](http://www.lucidchart.com/invitations/accept/c26f1e07-5216-4d74-9304-8ae8e1fbc576)
+[link here](https://www.dropbox.com/s/io56hp9iowudc3t/Mobile%20App%20Architecture.png)
 
 ###Dependencies
 - Cordova / Phonegap
