@@ -14,6 +14,7 @@
 		<script id="home-tpl" type="text/x-handlebars-template">
 			<div class='header'>
 				<header class="bar bar-standard bar-nav">
+					<a href="#sett" class="icon icon-gear pull-right"></a>
 					<h1 class="title">{{title}}</h1>
 				</header>
 				<div class="content wrap">
@@ -32,6 +33,7 @@
 				</div>
 			</div>
 		</script>
+
 		<!-- Define the post view template -->
 		<script id="post-tpl" type="text/x-handlebars-template">
 			<div class='header'>
@@ -48,24 +50,44 @@
 			</div>
 		</script>
 
+		<!-- define a settings view -->
+		<script id="settings-tpl" type="text/x-handlebars-template">
+			<div class='header'>
+				<header class="bar bar-standard bar-nav">
+					<a href="#" class="icon icon-left-nav btn-nav pull-left back"></a>
+					<h1 class="title">{{title}}</h1>
+				</header>
+				<div class="content wrap">
+					<div class="content-padded post-page">
+						<p>Hello world</p>
+					</div>
+				</div>
+			</div>
+		</script>
+
 		<!-- include cordova -->
 		<script src="cordova.js"></script>
 
 		<!-- libs -->
 		<script src="lib/jquery.js"></script>
 		<script src="lib/jquery-ui.js"></script>
-		<script src="js/storage/posts.js"></script>
+		<script src="js/storage/datastore.js"></script>
 		<script src="lib/handlebars.js"></script>
 		
+		<!-- app stuff -->
+		<script src="js/router.js"></script>
+
 		<!-- views -->
 		<script src="js/HomeView.js"></script>
 		<script src="js/PostView.js"></script>
-		
+		<script src="js/SettingsView.js"></script>
+
 		<!-- logic -->
 		<script src="js/main.js"></script>
 
 		<script type="text/javascript">
-			app.init(function(){});
+			app.init(function(){
+			});
 		</script>
 
 	</body>

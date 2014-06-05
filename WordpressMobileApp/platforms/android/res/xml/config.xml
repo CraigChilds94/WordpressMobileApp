@@ -5,19 +5,23 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <name>WordpressMobileApp</name>
+    <description>
+		A basic application which grabs a Wordpress feed and displays the results
+	</description>
+    <author email="dev@tannwestlake.com" href="http://tannwestlake.com">
+		Tann Westlake
+	</author>
+    <content src="index.html" />
+    <access origin="*" />
     <feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />
+        <param name="ios-package" value="CDVDevice" />
     </feature>
     <feature name="LocalNotification">
         <param name="android-package" value="de.appplant.cordova.plugin.localnotification.LocalNotification" />
+        <param name="ios-package" onload="true" value="APPLocalNotification" />
+        <param name="onload" value="true" />
     </feature>
-    <name>WordpressMobileApp</name>
-    <description>
-        A basic application which grabs a Wordpress feed and displays the results
-    </description>
-    <author email="dev@tannwestlake.com" href="http://tannwestlake.com">
-        Tann Westlake
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
+    <plugin name="LocalNotification" value="LocalNotification" />
 </widget>

@@ -9,18 +9,6 @@
                 "parents": {
                     "/*": [
                         {
-                            "xml": "<feature name=\"StatusBar\"><param name=\"ios-package\" onload=\"true\" value=\"CDVStatusBar\" /></feature>",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"StatusBarOverlaysWebView\" value=\"true\" />",
-                            "count": 1
-                        },
-                        {
-                            "xml": "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />",
-                            "count": 1
-                        },
-                        {
                             "xml": "<feature name=\"Device\"><param name=\"ios-package\" value=\"CDVDevice\" /></feature>",
                             "count": 1
                         },
@@ -34,9 +22,6 @@
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "com.tannwestlake.wpmobile"
-        },
         "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "com.tannwestlake.wpmobile"
         }

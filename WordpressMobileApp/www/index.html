@@ -9,11 +9,12 @@
 		<link href="css/ratchet.min.css" rel="stylesheet">
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
-	<body>
+	<body id="body">
 		<!-- Define the home view template -->
 		<script id="home-tpl" type="text/x-handlebars-template">
 			<div class='header'>
 				<header class="bar bar-standard bar-nav">
+					<a href="#sett" class="icon icon-gear pull-right"></a>
 					<h1 class="title">{{title}}</h1>
 				</header>
 				<div class="content wrap">
@@ -32,6 +33,7 @@
 				</div>
 			</div>
 		</script>
+
 		<!-- Define the post view template -->
 		<script id="post-tpl" type="text/x-handlebars-template">
 			<div class='header'>
@@ -48,13 +50,55 @@
 			</div>
 		</script>
 
+		<!-- define a settings view -->
+		<script id="settings-tpl" type="text/x-handlebars-template">
+			<div class='header'>
+				<header class="bar bar-standard bar-nav">
+					<a href="#" class="icon icon-left-nav btn-nav pull-left back"></a>
+					<h1 class="title">{{title}}</h1>
+				</header>
+					<div class="content">
+						<form class="input-group">
+							<input type="text" placeholder="Full name">
+							<input type="email" placeholder="Email">
+							<input type="text" placeholder="Username">
+						</form>
+
+						<h5 class="content-padded">App settings</h5>
+
+						<ul class="table-view">
+							<li class="table-view-cell media">
+								<span class="media-object pull-left icon icon-sound"></span>
+								<div class="media-body">
+								Enable sounds
+								</div>
+								<div class="toggle active">
+								<div class="toggle-handle" style="-webkit-transform: translate3d(44px, 0px, 0px);"></div>
+								</div>
+							</li>
+							<li class="table-view-cell media">
+								<span class="media-object pull-left icon icon-person"></span>
+								<div class="media-body">
+								Parental controls
+								</div>
+								<div class="toggle">
+								<div class="toggle-handle" style="-webkit-transform: translate3d(0px, 0px, 0px);"></div>
+								</div>
+							</li>
+						</ul>
+						<div class="content-padded">
+						<button class="btn btn-positive btn-block">Save settings</button>
+					</div>
+				</div>
+			</div>
+		</script>
+
 		<!-- include cordova -->
 		<script src="cordova.js"></script>
 
 		<!-- libs -->
 		<script src="lib/jquery.js"></script>
-		<script src="lib/jquery-ui.js"></script>
-		<script src="js/storage/posts.js"></script>
+		<script src="js/storage/datastore.js"></script>
 		<script src="lib/handlebars.js"></script>
 		
 		<!-- app stuff -->
@@ -63,7 +107,8 @@
 		<!-- views -->
 		<script src="js/HomeView.js"></script>
 		<script src="js/PostView.js"></script>
-		
+		<script src="js/SettingsView.js"></script>
+
 		<!-- logic -->
 		<script src="js/main.js"></script>
 

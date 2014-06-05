@@ -10,9 +10,15 @@ var app = {
 	init: function(callback) {
 		window.location.hash = "";
 		this.detailsUrl = /^#post(\d+)/;
+
+		this.routes = [
+			{ name: "post", pattern: /^#post(\d+)/ },
+			{ name: "settings", pattern: /#(sett)/ }
+		];
+
 		this.registerEvents();
 
-		this.store = new Posts(function() {
+		this.store = new DataStore(function() {
 			$('body').html(new HomeView(app.store).render().el);
 		});
 		
@@ -49,21 +55,23 @@ var app = {
 	 * we're looking out for
 	 */
 	route: function() {
-		var hash = window.location.hash;
-
-		if(!hash) {
-			$('body').html(new HomeView(this.store).render().el);
+		console.log(window.plugin.local);
+		window.plugin.notification.local.add({ message: 'Great app!' });
+		new Router(this.store, this.routes).run({
+			index : function(data) {
+				$('body').html(new HomeView(data.store).render().el);
+			},
+			post: function(data) {
+				data.store.getById(Number(data.match[1]), function(post) {
+					$('body').html(new PostView(post).render().el);
+				});
+			},
+			settings: function(data) {
+				$('body').html(new SettingsView(data.store).render().el);
+			}
+		}, function(router) {
 			$('.content').hide().fadeIn();
-			return;
-		}
-
-		var match = hash.match(app.detailsUrl);
-		if(match) {
-			app.store.getById(Number(match[1]), function(post) {
-				$('body').html(new PostView(post).render().el);
-				$('.content').hide().fadeIn();
-			});
-		}
+		});
 	},
 
 	/**

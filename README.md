@@ -116,7 +116,7 @@ var HomeView = function(store) {
 
 // We want to reduce the size of the excerpt as it's possible to be too large
 Handlebars.registerHelper('formatExcerpt', function(a) {
-  return new Handlebars.SafeString(a.substring(0, 152) + "[...]");
+	return new Handlebars.SafeString(a.substring(0, 152) + "[...]");
 });
 
 // Attach the templates

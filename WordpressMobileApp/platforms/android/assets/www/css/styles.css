@@ -46,10 +46,6 @@ ul.post-list, ul.table-view {
 	background-position: center top;
 }
 
-	.post-item:hover {
-		background: #000;
-	}
-
 	.post-item a .media-body{
 		color: #000;
 		background-color: #fff;

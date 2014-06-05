@@ -46,9 +46,6 @@
         }
     },
     "installed_plugins": {
-        "org.apache.cordova.statusbar": {
-            "PACKAGE_NAME": "com.tannwestlake.wpmobile"
-        },
         "de.appplant.cordova.plugin.local-notification": {
             "PACKAGE_NAME": "com.tannwestlake.wpmobile"
         }

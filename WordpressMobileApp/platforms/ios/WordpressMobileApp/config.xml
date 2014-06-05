@@ -19,11 +19,15 @@
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
-    <feature name="StatusBar">
-        <param name="ios-package" onload="true" value="CDVStatusBar" />
-    </feature>
-    <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="StatusBarBackgroundColor" value="#000000" />
+    <name>WordpressMobileApp</name>
+    <description>
+		A basic application which grabs a Wordpress feed and displays the results
+	</description>
+    <author email="dev@tannwestlake.com" href="http://tannwestlake.com">
+		Tann Westlake
+	</author>
+    <content src="index.html" />
+    <access origin="*" />
     <feature name="Device">
         <param name="ios-package" value="CDVDevice" />
     </feature>
@@ -31,13 +35,5 @@
         <param name="ios-package" onload="true" value="APPLocalNotification" />
         <param name="onload" value="true" />
     </feature>
-    <name>WordpressMobileApp</name>
-    <description>
-        A basic application which grabs a Wordpress feed and displays the results
-    </description>
-    <author email="dev@tannwestlake.com" href="http://tannwestlake.com">
-        Tann Westlake
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
+    <plugin name="LocalNotification" value="LocalNotification" />
 </widget>

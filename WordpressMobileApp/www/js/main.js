@@ -12,16 +12,16 @@ var app = {
 		this.detailsUrl = /^#post(\d+)/;
 
 		this.routes = [
-			{ name: "post", pattern : /^#post(\d+)/ }
+			{ name: "post", pattern: /^#post(\d+)/ },
+			{ name: "settings", pattern: /#(sett)/ }
 		];
 
 		this.registerEvents();
 
-		this.store = new Posts(function() {
+		this.store = new DataStore(function() {
 			$('body').html(new HomeView(app.store).render().el);
 		});
-		
-		window.plugin.notification.local.add({ message: 'Great app!' });
+
 		callback();
 	},
 	
@@ -63,6 +63,9 @@ var app = {
 				data.store.getById(Number(data.match[1]), function(post) {
 					$('body').html(new PostView(post).render().el);
 				});
+			},
+			settings: function(data) {
+				$('body').html(new SettingsView(data.store).render().el);
 			}
 		}, function(router) {
 			$('.content').hide().fadeIn();
@@ -90,6 +93,7 @@ var app = {
 	 */
 	onDeviceReady: function() {
 		console.log("devide ready");
+		window.plugin.notification.local.add({ message: 'Great app!' });
 	}
 
 };
