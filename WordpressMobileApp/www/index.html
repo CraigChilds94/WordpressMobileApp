@@ -10,60 +10,15 @@
 		<link href="css/styles.css" rel="stylesheet">
 	</head>
 	<body id="body">
-		<!-- Define the home view template -->
-		<script id="home-tpl" type="text/x-handlebars-template">
+
+		<!-- Define the standard template -->
+		<script id="template" type="text/x-handlebars-template">
 			<div class='header'>
 				<header class="bar bar-standard bar-nav">
 					<a href="#sett" class="icon icon-gear pull-right"></a>
 					<h1 class="title">{{title}}</h1>
 				</header>
 				<div class="content wrap">
-					<ul class='post-list table-view'>
-						{{#each posts}}
-							<li class="table-view-cell media post-item" style="background-image: url({{thumbnail}})">
-								<a class="navigate-right" href="#post{{id}}">
-									<div class="media-body">
-										{{title}}
-										<p>{{{formatExcerpt excerpt}}}</p>
-									</div>
-								</a>
-							</li>
-						{{/each}}
-					</ul>
-				</div>
-			</div>
-		</script>
-
-		<!-- Define the post view template -->
-		<script id="post-tpl" type="text/x-handlebars-template">
-			<div class='header'>
-				<header class="bar bar-standard bar-nav">
-					<a href="#" class="icon icon-left-nav btn-nav pull-left back"></a>
-					<h1 class="title">{{title}}</h1>
-				</header>
-				<div class="content wrap">
-					<img class="hero" src="{{thumbnail}}">
-					<div class="content-padded post-page">
-						{{{content}}}
-					</div>
-				</div>
-			</div>
-		</script>
-
-		<!-- define a settings view -->
-		<script id="settings-tpl" type="text/x-handlebars-template">
-			<div class='header'>
-				<header class="bar bar-standard bar-nav">
-					<a href="#" class="icon icon-left-nav btn-nav pull-left back"></a>
-					<h1 class="title">{{title}}</h1>
-				</header>
-					<div class="content">
-						<form class="input-group settings">
-							<input type="text" name="update_freq" placeholder="Enter how often the feed is updated, in minutes.">
-						</form>
-						<div class="content-padded">
-						<button class="btn btn-positive btn-block save-button">Save settings</button>
-					</div>
 				</div>
 			</div>
 		</script>
@@ -71,25 +26,10 @@
 		<!-- include cordova -->
 		<script src="cordova.js"></script>
 
-		<!-- libs -->
-		<script src="lib/jquery.js"></script>
-		<script src="js/storage/datastore.js"></script>
-		<script src="lib/handlebars.js"></script>
+		<!-- use require js to handle file loading -->
+		<script data-main="helpers/require.conf" src="js/lib/require.js"></script>
 		
-		<!-- app stuff -->
-		<script src="js/router.js"></script>
-
-		<!-- views -->
-		<script src="js/HomeView.js"></script>
-		<script src="js/PostView.js"></script>
-		<script src="js/SettingsView.js"></script>
-
 		<!-- logic -->
 		<script src="js/main.js"></script>
-
-		<script type="text/javascript">
-			app.init();
-		</script>
-
 	</body>
 </html>
