@@ -89,7 +89,8 @@ var Main = function() {
 		var snapper = new Snap({
 			element : document.getElementById('content'),
 			minDragDistance: 50,
-			disable: 'right'
+			disable: 'right',
+			flickThreshold: 5
 		});
 
 		$('#open').on('click', function() {
