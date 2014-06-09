@@ -3,10 +3,18 @@
 	margin: 0;
 }
 
+#content{
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden; /* Chrome and Safari */
+    -moz-backface-visibility:hidden; /* Firefox */
+    -ms-backface-visibility:hidden; /* Internet Explorer 10+ */
+}
+
 /* Demo toolbar styles */
 #toolbar {
 	background: #363636;
 	border-bottom: 1px solid #000;
+	position: absolute;
 }
 
 #toolbar h1 {

@@ -87,15 +87,21 @@ var Main = function() {
 		});
 
 		var snapper = new Snap({
-			element : document.getElementById('content')
+			element : document.getElementById('content'),
+			minDragDistance: 50,
+			disable: 'right'
 		});
 
-		$('#open-left').on('click', function() {
+		$('#open').on('click', function() {
 			if (snapper.state().state == "left") {
 				snapper.close();
 			} else {
 				snapper.open('left');
 			}
+		});
+
+		$('#close').on('click', function() {
+			snapper.close();
 		});
 	};
 };

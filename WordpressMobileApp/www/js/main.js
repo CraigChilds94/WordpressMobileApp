@@ -87,7 +87,9 @@ var Main = function() {
 		});
 
 		var snapper = new Snap({
-			element : document.getElementById('content')
+			element : document.getElementById('content'),
+			minDragDistance: 50,
+			disable: 'right'
 		});
 
 		$('#open').on('click', function() {
@@ -96,6 +98,10 @@ var Main = function() {
 			} else {
 				snapper.open('left');
 			}
+		});
+
+		$('#close').on('click', function() {
+			snapper.close();
 		});
 	};
 };
