@@ -12,7 +12,7 @@
 	<body id="body">
 
 		<!-- Define the standard template -->
-		<script id="template" type="text/x-handlebars-template">
+		<script id="home-view-tpl" type="text/x-handlebars-template">
 			<div class='header'>
 				<header class="bar bar-standard bar-nav">
 					<a href="#sett" class="icon icon-gear pull-right"></a>
@@ -26,10 +26,23 @@
 		<!-- include cordova -->
 		<script src="cordova.js"></script>
 
-		<!-- use require js to handle file loading -->
-		<script data-main="js/require.conf" src="js/lib/require.js"></script>
+		<!-- load the lib scripts -->
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/handlebars.js"></script>
+
+		<!-- app stuff -->
+		<script src="js/helpers/helper.js"></script>
+		<script src="js/routing/router.js"></script>
+		<script src="js/storage/datastore.js"></script>
+
+		<!-- view Js -->
+		<script src="js/view/home.js"></script>
 
 		<!-- logic -->
 		<script src="js/main.js"></script>
+
+		<script>
+			new Main().init();
+		</script>
 	</body>
 </html>
