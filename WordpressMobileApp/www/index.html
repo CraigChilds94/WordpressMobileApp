@@ -7,7 +7,7 @@
 		<meta name="apple-touch-fullscreen" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<!-- Include the compiled Ratchet CSS -->
-		<!--<link href="css/ratchet.min.css" rel="stylesheet">-->
+		<link href="css/ratchet.min.css" rel="stylesheet">
 		<link href="css/snap.css" rel="stylesheet">
 		<link href="css/snap-app.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
@@ -27,10 +27,10 @@
 				<div class="snap-drawer snap-drawer-right"></div>
 			</div>
 			<div id="content" class="snap-content">
-				<div id="toolbar">
-					<a id="open-left"></a>
-					<h1>{{title}}</h1>
-				</div>
+				<header id="toolbar" class="bar bar-nav">
+					<a id="open" class="icon icon-bars pull-left"></a>
+					<h1 class="title pull-right">{{title}}</h1>
+				</header>
 			</div>
 		</script>
 
@@ -40,7 +40,7 @@
 		<!-- load the lib scripts -->
 		<script src="js/lib/jquery.js"></script>
 		<script src="js/lib/handlebars.js"></script>
-		<script src="js/lib/touche.js"></script>
+		<!--<script src="js/lib/touche.js"></script>-->
 		<script src="js/lib/snap.js"></script>
 
 		<!-- app stuff -->

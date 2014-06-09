@@ -62,7 +62,7 @@ var Main = function() {
 	 * Called when the device is ready
 	 */
 	this.onDeviceReady = function() {
-		console.log("devide ready");
+		console.log("device ready");
 	};
 
 	/**
@@ -70,6 +70,9 @@ var Main = function() {
 	 * @return {Main} Return itself
 	 */
 	this.updateView = function() {
+
+		console.log('view updated');
+
 		// Run our router
 		new Router(this.store, this.conf.routes, {
 
@@ -81,6 +84,18 @@ var Main = function() {
 		}, function() {
 			// this is called once the route has been determined
 			$('.content').hide().fadeIn();
+		});
+
+		var snapper = new Snap({
+			element : document.getElementById('content')
+		});
+
+		$('#open-left').on('click', function() {
+			if (snapper.state().state == "left") {
+				snapper.close();
+			} else {
+				snapper.open('left');
+			}
 		});
 	};
 };

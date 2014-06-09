@@ -8,6 +8,8 @@ var DataStore = function(callback) {
 	var url = "http://craigchilds.me/blog/?feed=json";
 	var self = this;
 
+	this.events = {};
+
 	/**
 	 * Get a post by its ID
 	 * @param  Int  	id       	The id of the post
@@ -63,6 +65,7 @@ var DataStore = function(callback) {
 	this._reload = function(notifications) {
 		console.log("reloading posts");
 		var posts;
+		
 		$.ajaxSetup({'async' : false});
 		$.getJSON(url, function(data) {
 			changed = false;
@@ -78,11 +81,15 @@ var DataStore = function(callback) {
 				}
 			}
 
-			window.localStorage.setItem("posts", JSON.stringify(posts));
-
 			if(changed) {
-				window.plugin.notification.local.add({message: 'The feed has been updated.'});
-				//self.callLater(callback, this);
+				window.localStorage.setItem("posts", JSON.stringify(posts));
+
+				console.log("Going to call the callback");
+				self.callLater(callback, self);
+
+				if(window.plugin != undefined) {
+					window.plugin.notification.local.add({message: 'The feed has been updated.'});
+				}
 			}
 		});
 
@@ -90,47 +97,23 @@ var DataStore = function(callback) {
 	};
 
 	/**
-	 * Get currently stored settings and save defaults
-	 * @return {Object} The settings
+	 * Bind events
+	 * @param  {String}   event    The name of the event to be listened for
+	 * @param  {Function} callback The function which is called when this event occurs
+	 * @return {DataStore}            This
 	 */
-	this._getSettings = function() {
-		if(!set['update_freq']) {
-			set['update_freq'] = 50000;
-			window.localStorage.setItem("settings", JSON.stringify(set));
-		}
-
-		set = JSON.parse(window.localStorage.getItem("settings"));	
-
-		return set;
-	};
-
-	/**
-	 * Save settings data to the localstorage
-	 * @param  {Object} formInputs The form which the data is being stored from
-	 * @return {Object} The settings which have been saved
-	 */
-	this.saveSettings = function(formInputs, callback) {
-
-		$(formInputs).each(function() {
-			name = $(this).attr('name');
-			value = $(this).val();
-			self.settings[name] = value;
-		});
-
-		window.localStorage.setItem("settings", JSON.stringify(self.settings));
-		callback(self.settings);
+	this.on = function(event, callback) {
+		this.events[event] = callback;
 	};
 
 	// Wait until the posts have been retrieved before calling the callback.
 	this._reload(false);
 
-	// Grab the application settings
-	//this.settings = this._getSettings();
 	this.posts = this._getPosts();
 	this.callLater(callback, this);
 
 	// Check every so often
-	/*setInterval(function() {
-		self._reload(true);
-	}, Number(self.settings['update_freq']));*/
+	setInterval(function() {
+		self.posts = self._reload(true);
+	}, 500000);
 };

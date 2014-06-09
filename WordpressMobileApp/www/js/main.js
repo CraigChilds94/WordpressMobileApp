@@ -90,7 +90,7 @@ var Main = function() {
 			element : document.getElementById('content')
 		});
 
-		$('#open-left').on('click', function() {
+		$('#open').on('click', function() {
 			if (snapper.state().state == "left") {
 				snapper.close();
 			} else {

@@ -3,6 +3,21 @@
 	margin: 0;
 }
 
+/* Demo toolbar styles */
+#toolbar {
+	background: #363636;
+	border-bottom: 1px solid #000;
+}
+
+#toolbar h1 {
+	color: #fff;
+	font-size: 16px;
+}
+
+.snap-content {
+	background: #202020;
+}
+
 a, a:hover, a:active {
 	text-decoration: none;
 	color: #000;
