@@ -3,33 +3,33 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Craig Childs</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
 		<!-- Include the compiled Ratchet CSS -->
-		<link href="css/ratchet.min.css" rel="stylesheet">
+		<!--<link href="css/ratchet.min.css" rel="stylesheet">-->
+		<link href="css/snap.css" rel="stylesheet">
+		<link href="css/snap-app.css" rel="stylesheet">
 		<link href="css/app.css" rel="stylesheet">
 	</head>
-	<body id="body">
+	<body class>
 
 		<!-- Define the standard template -->
 		<script id="home-view-tpl" type="text/x-handlebars-template">
-			<div class='header'>
-				<header class="bar bar-standard bar-nav">
-					<h1 class="title">{{title}}</h1>
-				</header>
-				<div class="content">
-					<div class="posts">
-					{{#each posts}}
-						<a href="#post{{id}}">
-							<div class="post-item">
-								<img src="{{thumbnail}}">
-								<div class="info">
-									<h2>{{title}}</h2>
-								</div>
-							</div>
-						</a>
-					{{/each}}
-					</div>
+			<div class="snap-drawers">
+				<div class="snap-drawer snap-drawer-left" id="left-drawer">
+					<ul class="list">
+						<h2>Snap.js</h2>
+						<li><a href="../default.html">Default</a></li>
+						<li><a href="../noDrag.html">No Drag</a></li>
+					</ul>
+				</div>
+				<div class="snap-drawer snap-drawer-right"></div>
+			</div>
+			<div id="content" class="snap-content">
+				<div id="toolbar">
+					<a id="open-left"></a>
+					<h1>{{title}}</h1>
 				</div>
 			</div>
 		</script>
@@ -40,6 +40,8 @@
 		<!-- load the lib scripts -->
 		<script src="js/lib/jquery.js"></script>
 		<script src="js/lib/handlebars.js"></script>
+		<script src="js/lib/touche.js"></script>
+		<script src="js/lib/snap.js"></script>
 
 		<!-- app stuff -->
 		<script src="js/helpers/helper.js"></script>

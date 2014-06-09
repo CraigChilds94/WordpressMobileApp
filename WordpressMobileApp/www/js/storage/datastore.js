@@ -115,5 +115,5 @@ var DataStore = function(callback) {
 	// Check every so often
 	setInterval(function() {
 		self.posts = self._reload(true);
-	}, 2000);
+	}, 500000);
 };
