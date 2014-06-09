@@ -1,0 +1,48 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+a, a:hover, a:active {
+	text-decoration: none;
+	color: #000;
+}
+
+.post-item {
+	margin: 10px;
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px #eee;
+}
+
+.post-item a {
+	width: 100%;
+}
+
+.post-item img {
+	width: 100%;
+}
+	
+	.post-item .info {
+		width: 100%;
+		padding: 10px;
+	}
+
+	.post-item.info h2 {
+		font-size: 18px;
+		width: 100%;
+	}
+
+/* Landscape */
+@media only screen and (min-width: 480px) {
+
+	.posts {
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.post-item {
+		max-width: 47%;
+		float: left;
+	}
+}

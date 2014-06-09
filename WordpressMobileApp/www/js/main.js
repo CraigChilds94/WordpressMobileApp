@@ -70,6 +70,9 @@ var Main = function() {
 	 * @return {Main} Return itself
 	 */
 	this.updateView = function() {
+
+		console.log('view updated');
+
 		// Run our router
 		new Router(this.store, this.conf.routes, {
 
