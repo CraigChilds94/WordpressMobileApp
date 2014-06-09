@@ -7,10 +7,7 @@ var Main = function() {
 	var self = this;
 	// Application config data
 	this.conf = {
-		routes: [
-			{ name: "post", pattern: /^#post(\d+)/ },
-			{ name: "settings", pattern: /#(sett)/ }
-		]
+		routes: new Patterns(this)	
 	};
 
 	/**
@@ -74,18 +71,12 @@ var Main = function() {
 		console.log('view updated');
 
 		// Run our router
-		new Router(this.store, this.conf.routes, {
-
-			// This is the index page view
-			index: function(data) {
-				view = new HomeView(self.store).render().el;
-				$('body').html(view);
-			}
-		}, function() {
+		new Router(this.store, this.conf.routes, new Routes(this), function() {
 			// this is called once the route has been determined
 			$('.content').hide().fadeIn();
 		});
 
+		// Snap js stuff
 		var snapper = new Snap({
 			element : document.getElementById('content'),
 			minDragDistance: 50,
