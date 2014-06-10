@@ -11,7 +11,7 @@ var Routes = function(main) {
 
 			snapHandler();
 			$('.refresh').on('click', function() {
-				self.store.posts = self.store._reload(true);
+				main.store.posts = main.store._reload(true);
 			});
 		},
 

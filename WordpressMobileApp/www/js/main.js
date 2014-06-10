@@ -25,6 +25,9 @@ var Main = function() {
 		});
 	};
 
+	/**
+	 * Register the events for the app
+	 */
 	this.registerEvents = function() {
 		document.addEventListener("offline", this.onOffline, false);
 		document.addEventListener("backbutton", this.onBackPressed, false);
@@ -63,7 +66,10 @@ var Main = function() {
 		// Run our router
 		new Router(this.store, this.conf.routes, new Routes(this), function() {
 			// this is called once the route has been determined
-			$('.content').hide().fadeIn();
+			$('.snap-drawers').hide();
+			$('#content').hide().fadeIn(function() {
+				$('.snap-drawers').show();
+			});
 			$('.hidden').hide();
 		});
 	};

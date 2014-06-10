@@ -1,3 +1,7 @@
+body {
+	background: #363636;
+}
+
 #content{
     backface-visibility:hidden;
     -webkit-backface-visibility:hidden; /* Chrome and Safari */
