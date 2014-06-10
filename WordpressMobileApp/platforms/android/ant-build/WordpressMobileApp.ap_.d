@@ -36,6 +36,7 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/img \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/index.html \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/css/app.css \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/css/custom.css \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/css/ratchet.min.css \
@@ -67,4 +68,7 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/routing/routes.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/storage/datastore.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/view/home.js \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.statusbar \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www/statusbar.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/AndroidManifest.xml \

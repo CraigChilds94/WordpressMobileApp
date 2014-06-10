@@ -74,11 +74,8 @@
 
 			function run() {
 				//Helper.showAlert("123", "as");
+				StatusBar.overlaysWebView(false);
 				new Main().registerEvents().init();
-
-				if (parseFloat(window.device.version) >= 7.0) {
-					document.body.style.marginTop = "20px";
-				}
 			}
 
 			if(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
