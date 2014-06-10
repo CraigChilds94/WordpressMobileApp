@@ -24,7 +24,7 @@ body {
 	font-size: 16px;
 }
 
-#toolbar .icon {
+#toolbar .icon, #no-posts {
 	color: #fff;
 }
 
@@ -40,6 +40,33 @@ a, a:hover, a:active {
 .posts, .post {
 	margin-top: 44px;
 }
+
+.post {
+	width: 100%;
+	height: auto;
+	display: inline;
+}
+
+	.post img {
+		width: 100%;
+	}
+
+	.post #post-title {
+		color: #fff;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #ccc;
+	}
+
+	.post #post-content {
+		color: #ddd;
+	}
+
+	.post #post-content p {
+		padding: 10px 20px;
+		background: #aaa;
+		color: #000;
+	}
 
 .post-item {
 	margin: 10px;
@@ -100,7 +127,7 @@ a, a:hover, a:active {
 
 .settings-item input {
 	color: #000;
-	width: 80%;
+	max-width: 60%;
 	margin: 0;
 }
 
@@ -113,7 +140,9 @@ a, a:hover, a:active {
 	border-bottom: 1px solid #444;
 }
 
-
+.padded {
+	padding: 20px;
+}
 
 /* Landscape */
 @media only screen and (min-width: 480px) {

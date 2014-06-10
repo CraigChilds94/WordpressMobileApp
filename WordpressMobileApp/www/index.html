@@ -82,6 +82,7 @@
 			<div id="content" class="snap-content">
 				{{> header}}
 				<div class="posts snap-content">
+					{{#if posts}}
 					{{#each posts}}
 						<a href="#post{{id}}">
 							<div class="post-item">
@@ -92,6 +93,11 @@
 							</div>
 						</a>
 					{{/each}}
+					{{else}}
+						<div class="padded">
+							<h2 id="no-posts">There are no posts to show at this time.</h2>
+						</div>
+					{{/if}}
 				</div>
 			</div>
 		</script>
@@ -102,8 +108,13 @@
 			<div id="content" class="snap-content">
 				{{> header}}
 				<div class="post snap-content">
-					{{{post.title}}}
-					{{{post.content}}}
+					{{#if post.thumbnail}}
+					<img src="{{post.thumbnail}}">
+					{{/if}}
+					<div class="padded">
+						<h1 id="post-title">{{{post.title}}}</h1>
+						<section id="post-content">{{{post.content}}}</section>
+					</div>
 				</div>
 			</div>
 		</script>

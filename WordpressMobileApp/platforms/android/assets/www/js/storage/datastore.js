@@ -14,7 +14,7 @@ var DataStore = function(callback) {
 	 * Get a post by its ID
 	 * @param  Int  	id       	The id of the post
 	 * @param  Function callback 	This is a callback which will be called after
-	 * @return JSON 	post 		The post that's being looked for
+	 * @return {DataStore}            this
 	 */
 	this.getById = function(id, callback) {
 		var posts = this.posts;
@@ -25,6 +25,30 @@ var DataStore = function(callback) {
 			}
 		}
 		return callback(post);
+	};
+
+	/**
+	 * Get all posts where a match with the value is met
+	 * @param  {String}   val      The value that is being matched
+	 * @param  {Function} callback The function to call and pass the data to
+	 * @return {DataStore}            this
+	 */
+	this.getByName = function(val, callback) {
+		if(val == undefined) {
+			return callback(this.posts);
+		}
+
+		var posts = this.posts;
+		var returnable = [];
+		for(index in posts) {
+			post = posts[index];
+
+			if(post.title.toLowerCase().trim().indexOf(val.toLowerCase().trim()) > -1) {
+				returnable.push(post);
+			}
+		}
+
+		return callback(returnable);
 	};
 	
 	/**
