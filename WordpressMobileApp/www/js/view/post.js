@@ -1,13 +1,12 @@
 /**
- * Home view object
- * @param Main global app variable
+ * This is the definition for the post view
  */
-var HomeView = function(main) {
+var PostView = function(main, post) {
 
 	// View config data
 	this.conf = {
 		title: main.conf.title,
-		posts: main.store.posts
+		post: post
 	};
 
 	/**
@@ -23,15 +22,15 @@ var HomeView = function(main) {
 	 * @return Object  	this
 	 */
 	this.render = function() {
-		this.el.html(HomeView.template(this.conf));
+		this.el.html(PostView.template(this.conf));
 		return this;
 	};
 
 	this.init();
 };
 
-Handlebars.registerPartial("home-drawer", $("#home-drawer-partial").html());
+Handlebars.registerPartial("post-drawer", $("#post-drawer-partial").html());
 Handlebars.registerPartial("header", $("#header-partial").html());
 
 // Attach the templates
-HomeView.template = Handlebars.compile($('#home-view-tpl').html());
+PostView.template = Handlebars.compile($('#post-view-tpl').html());

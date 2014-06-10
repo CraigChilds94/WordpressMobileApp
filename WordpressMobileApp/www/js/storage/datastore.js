@@ -24,7 +24,6 @@ var DataStore = function(callback) {
 				break;
 			}
 		}
-
 		return callback(post);
 	};
 	

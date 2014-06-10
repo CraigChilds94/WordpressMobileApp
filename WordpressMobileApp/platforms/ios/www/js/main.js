@@ -85,5 +85,9 @@ var Main = function() {
 		$('#close').on('click', function() {
 			snapper.close();
 		});
+
+		$('.refresh').on('click', function() {
+			self.store.posts = self.store._reload(true);
+		});
 	};
 };

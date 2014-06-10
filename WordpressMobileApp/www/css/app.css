@@ -33,7 +33,7 @@ a, a:hover, a:active {
 	color: #000;
 }
 
-.posts {
+.posts, .post {
 	margin-top: 44px;
 }
 

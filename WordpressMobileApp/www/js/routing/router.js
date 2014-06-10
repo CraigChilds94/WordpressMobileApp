@@ -15,7 +15,6 @@ var Router = function(datastore, patterns, routes, callback) {
 	 * Constructor for the Router object
 	 */
 	this.init = function(routes, callback) {
-
 		// If no page has been requested
 		if(!this.page) {
 			// Need to use the default view
@@ -40,7 +39,7 @@ var Router = function(datastore, patterns, routes, callback) {
 					a = routes[r.name];
 
 					if(a != undefined) {
-						view = r(this.getData());
+						view = a(this.getData());
 					} else {
 						view = routes['index'](this.getData());
 					}
