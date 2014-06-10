@@ -55,16 +55,17 @@ var Routes = function(main) {
 			snapHandler();
 			searchHandler(main);
 			
-			console.log($('#slides'));
-			
-			$('#slides').slidesjs({
-				navigation: {
-      				active: false
-      			},
-      			pagination: {
-      				active: false
-      			}
+			$('#slides img').load(function() {
+				$('#slides').slidesjs({
+					navigation: {
+							active: false
+						},
+						pagination: {
+							active: false
+						}
+				});
 			});
+			
 		}
 	};
 
