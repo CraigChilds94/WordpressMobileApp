@@ -24,6 +24,9 @@
     </feature>
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
+    <feature name="SocialMessage">
+        <param name="ios-package" value="SocialMessage" />
+    </feature>
     <name>WordpressMobileApp</name>
     <description>
 		A basic application which grabs a Wordpress feed and displays the results

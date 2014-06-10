@@ -7,6 +7,7 @@ var Main = function() {
 	var self = this;
 	// Application config data
 	this.conf = {
+		title: "Craig's Blog",
 		routes: new Patterns(this)	
 	};
 

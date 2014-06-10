@@ -13,12 +13,25 @@ var Routes = function(main) {
 		// this is the post page route
 		post: function(data) {
 			id = Number(data.route.match[1]);
-
+			
+			var p;
 			view = main.store.getById(id, function(post){
-				return new PostView(main, post).render().el;
+				v =  new PostView(main, post).render().el;
+				p = post;
+				return v;
 			});
 
 			$('body').html(view);
+
+			$('.share').on('click', function() {
+				var message = {
+					text: '"' + p.title + '" by ' + p.author,
+					url: p.permalink, 
+					image: p.thumbnail
+				};
+
+				window.socialmessage.send(message);
+			});
 		}
 	};
 

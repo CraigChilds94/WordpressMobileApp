@@ -15,8 +15,8 @@
 	</head>
 	<body class>
 
-		<!-- Define the standard template -->
-		<script id="home-view-tpl" type="text/x-handlebars-template">
+		<!-- Home side drawer partial -->
+		<script id="home-drawer-partial" type="text/x-handlebars-template">
 			<div class="snap-drawers">
 				<ul class="list">
 					<h3 class="list-title line">Settings</h3>
@@ -26,12 +26,35 @@
 					</ul>
 				</ul>
 			</div>
-			<div id="content" class="snap-content">
-				<header id="toolbar" class="bar bar-nav">
+		</script>
+
+		<!-- Post side drawer partial -->
+		<script id="post-drawer-partial" type="text/x-handlebars-template">
+			<div class="snap-drawers">
+				<ul class="list">
+					<h3 class="list-title line">Settings</h3>
+					
+					<ul class="settings-list line">
+						<li class="settings-item"><a class="share">Share</a></li>
+					</ul>
+				</ul>
+			</div>
+		</script>
+
+		<!-- Header partial -->
+		<script id="header-partial" type="text/x-handlebars-template">
+			<header id="toolbar" class="bar bar-nav">
 					<a id="open" class="icon icon-bars pull-left"></a>
 					<h1 class="title pull-right">{{title}}</h1>
 					<a id="close" class="icon icon-bars pull-right hidden snap-btn"></a>
 				</header>
+		</script>
+
+		<!-- Define the standard template -->
+		<script id="home-view-tpl" type="text/x-handlebars-template">
+			{{> home-drawer}}
+			<div id="content" class="snap-content">
+				{{> header}}
 				<div class="posts snap-content">
 					{{#each posts}}
 						<a href="#post{{id}}">
@@ -43,6 +66,18 @@
 							</div>
 						</a>
 					{{/each}}
+				</div>
+			</div>
+		</script>
+
+		<!-- Post view Template -->
+		<script id="post-view-tpl" type="text/x-handlebars-template">
+			{{> post-drawer}}
+			<div id="content" class="snap-content">
+				{{> header}}
+				<div class="post snap-content">
+					{{{post.title}}}
+					{{{post.content}}}
 				</div>
 			</div>
 		</script>
@@ -63,6 +98,7 @@
 
 		<!-- view Js -->
 		<script src="js/view/home.js"></script>
+		<script src="js/view/post.js"></script>
 
 		<!-- routes -->
 		<script src="js/routing/patterns.js"></script>
