@@ -17,7 +17,7 @@
 
 		<!-- Home side drawer partial -->
 		<script id="home-drawer-partial" type="text/x-handlebars-template">
-			<div class="snap-drawers">
+			<div class="snap-drawers hardware-accel">
 				<ul class="list">
 					<li>
 						<h2 class="list-title line">Search</h2>
@@ -47,7 +47,7 @@
 
 		<!-- Post side drawer partial -->
 		<script id="post-drawer-partial" type="text/x-handlebars-template">
-			<div class="snap-drawers">
+			<div class="snap-drawers hardware-accel">
 				<ul class="list">
 					<li>
 						<h2 class="list-title line">Search</h2>
@@ -90,7 +90,7 @@
 		<!-- Define the standard template -->
 		<script id="home-view-tpl" type="text/x-handlebars-template">
 			{{> home-drawer}}
-			<div id="content" class="snap-content">
+			<div id="content" class="snap-content hardware-accel">
 				{{> header}}
 				<div class="posts snap-content">
 					{{#if posts}}
@@ -116,7 +116,7 @@
 		<!-- Post view Template -->
 		<script id="post-view-tpl" type="text/x-handlebars-template">
 			{{> post-drawer}}
-			<div id="content" class="snap-content">
+			<div id="content" class="snap-content hardware-accel">
 				{{> header}}
 				<div class="post snap-content">
 					{{#if post.thumbnail}}
@@ -125,6 +125,7 @@
 					<div class="padded">
 						<h1 id="post-title">{{{post.title}}}</h1>
 						<section id="post-content">{{{post.content}}}</section>
+						<a class="share"> Share This Post</a>
 					</div>
 				</div>
 			</div>
@@ -133,7 +134,7 @@
 		<!-- Gallery view Template -->
 		<script id="gallery-view-tpl" type="text/x-handlebars-template">
 			{{> home-drawer}}
-			<div id="content" class="snap-content">
+			<div id="content" class="snap-content hardware-accel">
 				{{> header}}
 				<div class="gallery snap-content">
 					<div id="slides">

@@ -18,11 +18,14 @@ html, body {
   z-index: 2;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
+}
+
+.hardware-accel {
   -webkit-transform: translate3d(0, 0, 0);
-     -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-       -o-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .snap-drawers {
@@ -33,6 +36,7 @@ html, body {
   left: 0;
   width: auto;
   height: auto;
+  overflow: auto;
 }
 
 .snap-drawer {
@@ -46,10 +50,10 @@ html, body {
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   -webkit-transition: width 0.3s ease;
-     -moz-transition: width 0.3s ease;
-      -ms-transition: width 0.3s ease;
-       -o-transition: width 0.3s ease;
-          transition: width 0.3s ease;
+	 -moz-transition: width 0.3s ease;
+	  -ms-transition: width 0.3s ease;
+	   -o-transition: width 0.3s ease;
+		  transition: width 0.3s ease;
 }
 
 .snap-drawer-left {

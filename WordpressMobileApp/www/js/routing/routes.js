@@ -100,7 +100,7 @@ function snapHandler() {
 function searchHandler(main) {
 	$('.search').on('change', function() {
 		if(window.location.hash == "") {
-			main.updateView();
+			main.updateContent();
 		} else {
 			window.location.hash = "";
 		}

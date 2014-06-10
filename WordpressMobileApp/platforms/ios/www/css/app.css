@@ -82,6 +82,11 @@ a, a:hover, a:active {
 		color: #000;
 	}
 
+	.post a {
+		text-decoration: underline;
+		color: #fff;
+	}
+
 .post-item {
 	margin: 10px;
 	border: 1px solid #ddd;
