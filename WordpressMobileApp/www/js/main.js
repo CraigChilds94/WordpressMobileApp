@@ -66,29 +66,5 @@ var Main = function() {
 			$('.content').hide().fadeIn();
 			$('.hidden').hide();
 		});
-
-		// Snap js stuff
-		var snapper = new Snap({
-			element : document.getElementById('content'),
-			minDragDistance: 50,
-			disable: 'right',
-			flickThreshold: 5
-		});
-
-		$('#open').on('click', function() {
-			if (snapper.state().state == "left") {
-				snapper.close();
-			} else {
-				snapper.open('left');
-			}
-		});
-
-		$('#close').on('click', function() {
-			snapper.close();
-		});
-
-		$('.refresh').on('click', function() {
-			self.store.posts = self.store._reload(true);
-		});
 	};
 };

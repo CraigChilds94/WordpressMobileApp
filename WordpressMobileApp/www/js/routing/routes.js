@@ -8,6 +8,11 @@ var Routes = function(main) {
 		index: function(data) {
 			view = new HomeView(main).render().el;
 			$('body').html(view);
+
+			snapHandler();
+			$('.refresh').on('click', function() {
+				self.store.posts = self.store._reload(true);
+			});
 		},
 
 		// this is the post page route
@@ -23,6 +28,7 @@ var Routes = function(main) {
 
 			$('body').html(view);
 
+			snapHandler();
 			$('.share').on('click', function() {
 				var message = {
 					text: '"' + p.title + '" by ' + p.author,
@@ -37,3 +43,26 @@ var Routes = function(main) {
 
 	return routes;
 };
+
+// Code that controls snap.js
+function snapHandler() {
+	// Snap js stuff
+	var snapper = new Snap({
+		element : document.getElementById('content'),
+		minDragDistance: 50,
+		disable: 'right',
+		flickThreshold: 5
+	});
+
+	$('#open').on('click', function() {
+		if (snapper.state().state == "left") {
+			snapper.close();
+		} else {
+			snapper.open('left');
+		}
+	});
+
+	$('#close').on('click', function() {
+		snapper.close();
+	});
+}
