@@ -2,12 +2,12 @@
  * Home view object
  * @param Main global app variable
  */
-var HomeView = function(main) {
+var HomeView = function(main, posts) {
 
 	// View config data
 	this.conf = {
 		title: main.conf.title,
-		posts: main.store.posts
+		posts: posts
 	};
 
 	/**

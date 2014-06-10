@@ -6,10 +6,15 @@ var Routes = function(main) {
 
 		// This is the index page view route
 		index: function(data) {
-			view = new HomeView(main).render().el;
+			view = main.store.getByName($('.search').val(), function(posts) {
+				return new HomeView(main, posts).render().el;
+			});
+
 			$('body').html(view);
 
 			snapHandler();
+			searchHandler(main);
+
 			$('.refresh').on('click', function() {
 				main.store.posts = main.store._reload(true);
 			});
@@ -29,6 +34,8 @@ var Routes = function(main) {
 			$('body').html(view);
 
 			snapHandler();
+			searchHandler(main);
+
 			$('.share').on('click', function() {
 				var message = {
 					text: '"' + p.title + '" by ' + p.author,
@@ -64,5 +71,12 @@ function snapHandler() {
 
 	$('#close').on('click', function() {
 		snapper.close();
+	});
+}
+
+// Handle the search bar and it's functionality
+function searchHandler(main) {
+	$('.search').on('change', function() {
+		main.updateView();
 	});
 }
