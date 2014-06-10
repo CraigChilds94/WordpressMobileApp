@@ -77,6 +77,10 @@ function snapHandler() {
 // Handle the search bar and it's functionality
 function searchHandler(main) {
 	$('.search').on('change', function() {
-		main.updateView();
+		if(window.location.hash == "") {
+			main.updateView();
+		} else {
+			window.location.hash = "";
+		}
 	});
 }
