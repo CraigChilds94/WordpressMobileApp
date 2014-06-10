@@ -25,10 +25,11 @@
 					<li><a href="../noDrag.html">No Drag</a></li>
 				</ul>
 			</div>
-			<div id="content" class="">
+			<div id="content" class="snap-content">
 				<header id="toolbar" class="bar bar-nav">
 					<a id="open" class="icon icon-bars pull-left"></a>
 					<h1 class="title pull-right">{{title}}</h1>
+					<a id="close" class="icon icon-bars pull-right hidden snap-btn"></a>
 				</header>
 				<div class="posts snap-content">
 					{{#each posts}}
@@ -70,7 +71,21 @@
 		<script src="js/main.js"></script>
 
 		<script>
-			new Main().init();
+
+			function run() {
+				//Helper.showAlert("123", "as");
+				new Main().registerEvents().init();
+
+				if (parseFloat(window.device.version) >= 7.0) {
+					document.body.style.marginTop = "20px";
+				}
+			}
+
+			if(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
+				document.addEventListener("deviceready", run, true);
+			} else {
+				run();
+			}
 		</script>
 	</body>
 </html>

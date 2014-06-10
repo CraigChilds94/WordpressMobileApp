@@ -107,9 +107,7 @@ var DataStore = function(callback) {
 	};
 
 	// Wait until the posts have been retrieved before calling the callback.
-	this._reload(false);
-
-	this.posts = this._getPosts();
+	this.posts = this._reload(false);
 	this.callLater(callback, this);
 
 	// Check every so often
