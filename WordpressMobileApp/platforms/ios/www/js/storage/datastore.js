@@ -63,7 +63,6 @@ var DataStore = function(callback) {
 	 * @return String  		A string format of the json encoded data
 	 */
 	this._reload = function(notifications) {
-		console.log("reloading posts");
 		var posts;
 		
 		$.ajaxSetup({'async' : false});
@@ -83,8 +82,6 @@ var DataStore = function(callback) {
 
 			if(changed) {
 				window.localStorage.setItem("posts", JSON.stringify(posts));
-
-				console.log("Going to call the callback");
 				self.callLater(callback, self);
 
 				if(window.plugin != undefined) {
@@ -97,21 +94,20 @@ var DataStore = function(callback) {
 	};
 
 	/**
-	 * Bind events
-	 * @param  {String}   event    The name of the event to be listened for
-	 * @param  {Function} callback The function which is called when this event occurs
-	 * @return {DataStore}            This
+	 * Update the refresh rate for post loading
+	 * @param  {Int} value how often (minutes) to update the feed
 	 */
-	this.on = function(event, callback) {
-		this.events[event] = callback;
+	this.updateRefresh = function(value) {
+		this.refreshRate = value;
 	};
 
 	// Wait until the posts have been retrieved before calling the callback.
 	this.posts = this._reload(false);
 	this.callLater(callback, this);
+	this.refreshRate = 60000; //60000 = 1 minute
 
 	// Check every so often
 	setInterval(function() {
 		self.posts = self._reload(true);
-	}, 500000);
+	}, this.refreshRate);
 };

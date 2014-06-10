@@ -12,6 +12,7 @@
 	display: block;
 	clear:both;
 	z-index: 1000;
+	position: relative;
 }
 
 #toolbar h1 {
@@ -61,6 +62,42 @@ a, a:hover, a:active {
 		font-size: 18px;
 		width: 100%;
 	}
+
+.list {
+	padding: 0;
+	margin: 0;
+}
+
+.line {
+	border-bottom: 1px solid #555;
+	box-shadow: 0 1px 0 #202020;
+}
+
+.list .list-title {
+	padding: 10px 20px;
+	margin: 0;
+	font-weight: 200;
+}
+
+.settings-list {
+	width: 100%;
+	padding: 10px 20px;
+	list-style: none;
+	color: #fff;
+}
+
+.settings-item {
+	padding: 10px;
+	border-top: 1px solid #444;
+}
+
+.settings-item a {
+	color: #fff;
+}
+
+.settings-item:last-child {
+	border-bottom: 1px solid #444;
+}
 
 /* Landscape */
 @media only screen and (min-width: 480px) {

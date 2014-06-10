@@ -27,7 +27,6 @@ var Main = function() {
 	this.registerEvents = function() {
 		document.addEventListener("offline", this.onOffline, false);
 		document.addEventListener("backbutton", this.onBackPressed, false);
-		//document.addEventListener("deviceready", this.onDeviceReady, false);
 
 		// Handle routes
 		$(window).on('hashchange', $.proxy(this.updateView, this));
@@ -53,7 +52,7 @@ var Main = function() {
 			navigator.app.exitApp();
 		}
 	};
-	
+
 	/**
 	 * Called when the view needs to be updated
 	 * @return {Main} Return itself

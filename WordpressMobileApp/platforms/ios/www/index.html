@@ -74,12 +74,14 @@
 
 			function run() {
 				//Helper.showAlert("123", "as");
-				StatusBar.overlaysWebView(false);
 				new Main().registerEvents().init();
 			}
 
 			if(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
-				document.addEventListener("deviceready", run, true);
+				document.addEventListener("deviceready", function() {
+					StatusBar.overlaysWebView(false);
+					run();
+				}, true);
 			} else {
 				run();
 			}

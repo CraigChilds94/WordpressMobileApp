@@ -19,10 +19,11 @@
 		<script id="home-view-tpl" type="text/x-handlebars-template">
 			<div class="snap-drawers">
 				<ul class="list">
-					<h2>Snap.js</h2>
+					<h3 class="list-title line">Settings</h3>
 					
-					<li><a href="../default.html">Default</a></li>
-					<li><a href="../noDrag.html">No Drag</a></li>
+					<ul class="settings-list line">
+						<li class="settings-item"><a class="refresh">Refresh</a></li>
+					</ul>
 				</ul>
 			</div>
 			<div id="content" class="snap-content">
@@ -74,12 +75,14 @@
 
 			function run() {
 				//Helper.showAlert("123", "as");
-				StatusBar.overlaysWebView(false);
 				new Main().registerEvents().init();
 			}
 
 			if(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
-				document.addEventListener("deviceready", run, true);
+				document.addEventListener("deviceready", function() {
+					StatusBar.overlaysWebView(false);
+					run();
+				}, true);
 			} else {
 				run();
 			}

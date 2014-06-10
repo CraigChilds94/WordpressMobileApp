@@ -1,13 +1,7 @@
-/* Show "Left" drawer for the "Right" drawer in the demo */
 .snapjs-right .snap-drawer-left {
 	display: block;
 	right: 0;
 	left: auto;
-}
-
-/* Hide the actual "Right" drawer in the demo */
-.snapjs-right .snap-drawer-right {
-	display: none;
 }
 
 #open-left {
@@ -17,7 +11,6 @@
 	height: 44px;
 }
 
-/* Styles for expanding "Search" input in the "Expanding" demo */
 .search {
 	padding-bottom: 10px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -47,7 +40,6 @@
 	border-color: #151515;
 }
 
-/* Styles for the "Settings" demo */
 .opt {
 	padding: 20px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -62,11 +54,7 @@
 }
 
 .snap-drawers {
-	background: #323949;
-}
-
-.snap-drawer {
-	background: #323949;
+	background: #363636;
 	color: #eee;
 }
 
