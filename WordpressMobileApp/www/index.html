@@ -27,6 +27,13 @@
 						</ul>
 					</li>
 					<li>
+						<h2 class="list-title line">View</h2>
+						
+						<ul class="settings-list line">
+							<li class="settings-item"><a href="#gallery">Gallery</a></li>
+						</ul>
+					</li>
+					<li>
 						<h2 class="list-title line">Settings</h2>
 						
 						<ul class="settings-list line">
@@ -53,6 +60,7 @@
 						
 						<ul class="settings-list line">
 							<li class="settings-item"><a href="#">All Posts</a></li>
+							<li class="settings-item"><a href="#gallery">Gallery</a></li>
 						</ul>
 					</li>
 					<li>
@@ -73,7 +81,6 @@
 			<header id="toolbar" class="bar bar-nav line">
 				<a id="open" class="icon icon-bars pull-left"></a>
 				<h1 class="title pull-right">{{title}}</h1>
-				<a id="close" class="icon icon-bars pull-right hidden snap-btn"></a>
 			</header>
 		</script>
 
@@ -120,6 +127,23 @@
 			</div>
 		</script>
 
+		<!-- Gallery view Template -->
+		<script id="gallery-view-tpl" type="text/x-handlebars-template">
+			{{> home-drawer}}
+			<div id="content" class="snap-content">
+				{{> header}}
+				<div class="gallery snap-content">
+					<div id="slides">
+						<img src="http://placehold.it/940x528">
+						<img src="http://placehold.it/940x528">
+						<img src="http://placehold.it/940x528">
+						<img src="http://placehold.it/940x528">
+						<img src="http://placehold.it/940x528">
+					</div>
+				</div>
+			</div>
+		</script>
+
 		<!-- include cordova -->
 		<script src="cordova.js"></script>
 
@@ -128,6 +152,7 @@
 		<script src="js/lib/handlebars.js"></script>
 		<!--<script src="js/lib/touche.js"></script>-->
 		<script src="js/lib/snap.js"></script>
+		<script src="js/lib/slides.js"></script>
 
 		<!-- app stuff -->
 		<script src="js/helpers/helper.js"></script>
@@ -137,6 +162,7 @@
 		<!-- view Js -->
 		<script src="js/view/home.js"></script>
 		<script src="js/view/post.js"></script>
+		<script src="js/view/gallery.js"></script>
 
 		<!-- routes -->
 		<script src="js/routing/patterns.js"></script>

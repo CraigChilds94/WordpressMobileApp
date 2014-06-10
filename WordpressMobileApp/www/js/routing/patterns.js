@@ -6,6 +6,6 @@ var Patterns = function(main) {
 
 	return [
 		{ name: "post", pattern: /^#post(\d+)/ },
-		{ name: "settings", pattern: /#(sett)/ }
+		{ name: "gallery", pattern: /#(gallery)/ }
 	];
 };

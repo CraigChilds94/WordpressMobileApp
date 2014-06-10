@@ -32,6 +32,10 @@ body {
 	background: #202020;
 }
 
+.snap-content img {
+	width: 100%;
+}
+
 a, a:hover, a:active {
 	text-decoration: none;
 	color: #000;

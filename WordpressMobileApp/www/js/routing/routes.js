@@ -45,6 +45,26 @@ var Routes = function(main) {
 
 				window.socialmessage.send(message);
 			});
+		},
+
+		// This is the route for the gallery view
+		gallery: function(data) {
+			view = new GalleryView(main, []).render().el;
+			$('body').html(view);
+
+			snapHandler();
+			searchHandler(main);
+			
+			console.log($('#slides'));
+			
+			$('#slides').slidesjs({
+				navigation: {
+      				active: false
+      			},
+      			pagination: {
+      				active: false
+      			}
+			});
 		}
 	};
 
