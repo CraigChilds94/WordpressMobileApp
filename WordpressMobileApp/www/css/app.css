@@ -85,23 +85,35 @@ a, a:hover, a:active {
 
 .settings-list {
 	width: 100%;
-	padding: 10px 20px;
+	padding: 10px 0px;
 	list-style: none;
 	color: #fff;
 }
 
 .settings-item {
-	padding: 10px;
+	margin: 0;
+	display: inline-block;
+	width: 100%;
 	border-top: 1px solid #444;
+	padding: 10px 20px;
+}
+
+.settings-item input {
+	color: #000;
+	width: 80%;
+	margin: 0;
 }
 
 .settings-item a {
 	color: #fff;
+	font-weight: 100;
 }
 
 .settings-item:last-child {
 	border-bottom: 1px solid #444;
 }
+
+
 
 /* Landscape */
 @media only screen and (min-width: 480px) {
