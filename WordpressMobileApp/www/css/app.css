@@ -1,5 +1,6 @@
 body {
 	background: #363636;
+	-webkit-overflow-scrolling: touch;
 }
 
 #content{
@@ -9,7 +10,16 @@ body {
     -ms-backface-visibility:hidden; /* Internet Explorer 10+ */
 }
 
-/* Demo toolbar styles */
+#slide-region {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 25%;
+	height: 100%;
+	/*border: 1px solid #fff;*/
+}
+
 #toolbar {
 	background: #363636;
 	border-bottom: 1px solid #000;

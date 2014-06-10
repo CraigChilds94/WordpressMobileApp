@@ -76,10 +76,11 @@ var Routes = function(main) {
 function snapHandler() {
 	// Snap js stuff
 	var snapper = new Snap({
-		element : document.getElementById('content'),
+		element: document.getElementById('content'),
 		minDragDistance: 50,
 		disable: 'right',
-		flickThreshold: 5
+		flickThreshold: 5,
+		dragger: document.getElementById('slide-region')
 	});
 
 	$('#open').on('click', function() {
