@@ -14,7 +14,9 @@
 #toolbar {
 	background: #363636;
 	border-bottom: 1px solid #000;
-	position: absolute;
+	display: block;
+	clear:both;
+	z-index: 1000;
 }
 
 #toolbar h1 {

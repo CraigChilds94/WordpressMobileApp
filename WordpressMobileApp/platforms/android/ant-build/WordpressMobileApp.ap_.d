@@ -62,7 +62,9 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/lib/require.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/lib/snap.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/lib/touche.js \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/routing/patterns.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/routing/router.js \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/routing/routes.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/storage/datastore.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/view/home.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/AndroidManifest.xml \

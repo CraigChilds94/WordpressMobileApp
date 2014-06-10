@@ -25,11 +25,23 @@
 					<li><a href="../noDrag.html">No Drag</a></li>
 				</ul>
 			</div>
-			<div id="content" class="snap-content">
+			<div id="content" class="">
 				<header id="toolbar" class="bar bar-nav">
 					<a id="open" class="icon icon-bars pull-left"></a>
 					<h1 class="title pull-right">{{title}}</h1>
 				</header>
+				<div class="posts snap-content">
+					{{#each posts}}
+						<a href="#post{{id}}">
+							<div class="post-item">
+								<img src="{{thumbnail}}">
+								<div class="info">
+									<h2>{{title}}</h2>
+								</div>
+							</div>
+						</a>
+					{{/each}}
+				</div>
 			</div>
 		</script>
 
