@@ -24,13 +24,30 @@
     </feature>
     <preference name="StatusBarOverlaysWebView" value="true" />
     <preference name="StatusBarBackgroundColor" value="#000000" />
+    <feature name="SocialMessage">
+        <param name="ios-package" value="SocialMessage" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
     <name>WordpressMobileApp</name>
     <description>
-        A basic application which grabs a Wordpress feed and displays the results
-    </description>
+		A basic application which grabs a Wordpress feed and displays the results
+	</description>
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="10000" />
     <author email="dev@tannwestlake.com" href="http://tannwestlake.com">
-        Tann Westlake
-    </author>
+		Tann Westlake
+	</author>
     <content src="index.html" />
     <access origin="*" />
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="LocalNotification">
+        <param name="ios-package" onload="true" value="APPLocalNotification" />
+        <param name="onload" value="true" />
+    </feature>
+    <plugin name="LocalNotification" value="LocalNotification" />
 </widget>

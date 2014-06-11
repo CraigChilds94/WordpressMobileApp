@@ -1,0 +1,26 @@
+#content {
+	z-index: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.bar {
+	background: #363636;
+}
+
+.bar button {
+	background: url(../img/open.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	border: none;
+	height: 28px;
+}
+
+.bar h1 {
+	color: #fff;
+}
+
+.snap-drawer {
+	z-index: 0;
+}

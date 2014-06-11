@@ -3,46 +3,146 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Craig Childs</title>
-		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta name="apple-touch-fullscreen" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		
 		<!-- Include the compiled Ratchet CSS -->
 		<link href="css/ratchet.min.css" rel="stylesheet">
-		<link href="css/styles.css" rel="stylesheet">
+		<link href="css/snap.css" rel="stylesheet">
+		<link href="css/snap-app.css" rel="stylesheet">
+		<link href="css/app.css" rel="stylesheet">
 	</head>
-	<body>
-		<!-- Define the home view template -->
-		<script id="home-tpl" type="text/x-handlebars-template">
-			<div class='header'>
-				<header class="bar bar-standard bar-nav">
-					<h1 class="title">{{title}}</h1>
-				</header>
-				<div class="content wrap">
-					<ul class='post-list table-view'>
-						{{#each posts}}
-							<li class="table-view-cell media post-item" style="background-image: url({{thumbnail}})">
-								<a class="navigate-right" href="#post{{id}}">
-									<div class="media-body">
-										{{title}}
-										<p>{{{formatExcerpt excerpt}}}</p>
-									</div>
-								</a>
-							</li>
-						{{/each}}
-					</ul>
+	<body class>
+
+		<!-- Home side drawer partial -->
+		<script id="home-drawer-partial" type="text/x-handlebars-template">
+			<div class="snap-drawers hardware-accel">
+				<ul class="list">
+					<li>
+						<h2 class="list-title line">Search</h2>
+						
+						<ul class="settings-list line">
+							<li class="settings-item"><input class="search" type="search" placeholder="Search"></li>
+						</ul>
+					</li>
+					<li>
+						<h2 class="list-title line">View</h2>
+						
+						<ul class="settings-list line">
+							<li class="settings-item"><a href="#">All Posts</a></li>
+							<li class="settings-item"><a href="#gallery">Gallery</a></li>
+						</ul>
+					</li>
+					<li>
+						<h2 class="list-title line">Settings</h2>
+						
+						<ul class="settings-list line">
+							<li class="settings-item"><a class="refresh">Refresh</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</script>
+
+		<!-- Post side drawer partial -->
+		<script id="post-drawer-partial" type="text/x-handlebars-template">
+			<div class="snap-drawers hardware-accel">
+				<ul class="list">
+					<li>
+						<h2 class="list-title line">Search</h2>
+						
+						<ul class="settings-list line">
+							<li class="settings-item"><input class="search" type="search" placeholder="Search"></li>
+						</ul>
+					</li>
+					<li>
+						<h2 class="list-title line">View</h2>
+						
+						<ul class="settings-list line">
+							<li class="settings-item"><a href="#">All Posts</a></li>
+							<li class="settings-item"><a href="#gallery">Gallery</a></li>
+						</ul>
+					</li>
+					<li>
+						<h2 class="list-title line">Settings</h2>
+						
+						<ul class="settings-list line">
+							<li class="settings-item"><a class="refresh">Refresh</a></li>
+							<li class="settings-item"><a class="share">Share</a></li>
+						</ul>
+					</li>
+				</ul>
+
+			</div>
+		</script>
+
+		<!-- Header partial -->
+		<script id="header-partial" type="text/x-handlebars-template">
+			<header id="toolbar" class="bar bar-nav line">
+				<a id="open" class="icon icon-bars pull-left"></a>
+				<h1 class="title pull-right">{{title}}</h1>
+			</header>
+			<div id="slide-region">
+			</div>
+		</script>
+
+		<!-- Define the standard template -->
+		<script id="home-view-tpl" type="text/x-handlebars-template">
+			{{> home-drawer}}
+			<div id="content" class="snap-content hardware-accel">
+				{{> header}}
+				<div class="posts snap-content">
+					{{#if posts}}
+					{{#each posts}}
+						<a href="#post{{id}}">
+							<div class="post-item">
+								<img src="{{thumbnail}}">
+								<div class="info">
+									<h2>{{title}}</h2>
+								</div>
+							</div>
+						</a>
+					{{/each}}
+					{{else}}
+						<div class="padded">
+							<h2 id="no-posts">There are no posts to show at this time.</h2>
+						</div>
+					{{/if}}
 				</div>
 			</div>
 		</script>
-		<!-- Define the post view template -->
-		<script id="post-tpl" type="text/x-handlebars-template">
-			<div class='header'>
-				<header class="bar bar-standard bar-nav">
-					<a href="#" class="icon icon-left-nav btn-nav pull-left back"></a>
-					<h1 class="title">{{title}}</h1>
-				</header>
-				<div class="content wrap">
-					<img class="hero" src="{{thumbnail}}">
-					<div class="content-padded post-page">
-						{{{content}}}
+
+		<!-- Post view Template -->
+		<script id="post-view-tpl" type="text/x-handlebars-template">
+			{{> post-drawer}}
+			<div id="content" class="snap-content hardware-accel">
+				{{> header}}
+				<div class="post snap-content">
+					{{#if post.thumbnail}}
+					<img src="{{post.thumbnail}}">
+					{{/if}}
+					<div class="padded">
+						<h1 id="post-title">{{{post.title}}}</h1>
+						<section id="post-content">{{{post.content}}}</section>
+						<a class="share"> Share This Post</a>
+					</div>
+				</div>
+			</div>
+		</script>
+
+		<!-- Gallery view Template -->
+		<script id="gallery-view-tpl" type="text/x-handlebars-template">
+			{{> home-drawer}}
+			<div id="content" class="snap-content hardware-accel">
+				{{> header}}
+				<div class="gallery snap-content">
+					<div id="slides">
+						<img src="http://placehold.it/940x528">
+						<img src="http://placehold.it/940x528">
+						<img src="http://placehold.it/940x528">
+						<img src="http://placehold.it/940x528">
+						<img src="http://placehold.it/940x528">
 					</div>
 				</div>
 			</div>
@@ -51,22 +151,51 @@
 		<!-- include cordova -->
 		<script src="cordova.js"></script>
 
-		<!-- libs -->
-		<script src="lib/jquery.js"></script>
-		<script src="lib/jquery-ui.js"></script>
-		<script src="js/storage/posts.js"></script>
-		<script src="lib/handlebars.js"></script>
-		
-		<!-- views -->
-		<script src="js/HomeView.js"></script>
-		<script src="js/PostView.js"></script>
-		
+		<!-- load the lib scripts -->
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/handlebars.js"></script>
+		<!--<script src="js/lib/touche.js"></script>-->
+		<script src="js/lib/snap.js"></script>
+		<script src="js/lib/slides.js"></script>
+
+		<!-- app stuff -->
+		<script src="js/helpers/helper.js"></script>
+		<script src="js/routing/router.js"></script>
+		<script src="js/storage/datastore.js"></script>
+
+		<!-- view Js -->
+		<script src="js/view/home.js"></script>
+		<script src="js/view/post.js"></script>
+		<script src="js/view/gallery.js"></script>
+
+		<!-- routes -->
+		<script src="js/routing/patterns.js"></script>
+		<script src="js/routing/routes.js"></script>
+
 		<!-- logic -->
 		<script src="js/main.js"></script>
 
-		<script type="text/javascript">
-			app.init(function(){});
-		</script>
+		<script>
 
+			function run() {
+				//Helper.showAlert("123", "as");
+				new Main().registerEvents().init();
+			}
+
+			if(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
+				document.addEventListener("deviceready", function() {
+					
+					navigator.splashscreen.show();
+					setTimeout(function() {
+						navigator.splashscreen.hide();
+						StatusBar.overlaysWebView(false);
+						run();
+					}, 2000);
+
+				}, true);
+			} else {
+				run();
+			}
+		</script>
 	</body>
 </html>

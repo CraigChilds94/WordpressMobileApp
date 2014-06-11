@@ -1,0 +1,185 @@
+body {
+	background: #363636;
+	-webkit-overflow-scrolling: touch;
+}
+
+#content{
+    backface-visibility:hidden;
+    -webkit-backface-visibility:hidden; /* Chrome and Safari */
+    -moz-backface-visibility:hidden; /* Firefox */
+    -ms-backface-visibility:hidden; /* Internet Explorer 10+ */
+}
+
+#slide-region {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 999;
+	width: 25%;
+	height: 100%;
+	/*border: 1px solid #fff;*/
+}
+
+#toolbar {
+	background: #363636;
+	border-bottom: 1px solid #000;
+	display: block;
+	clear:both;
+	z-index: 1000;
+	position: relative;
+}
+
+#toolbar h1 {
+	color: #fff;
+	font-size: 16px;
+}
+
+#toolbar .icon, #no-posts {
+	color: #fff;
+}
+
+.snap-content {
+	background: #202020;
+}
+
+.snap-content img {
+	width: 100%;
+}
+
+a, a:hover, a:active {
+	text-decoration: none;
+	color: #000;
+}
+
+.posts, .post {
+	margin-top: 44px;
+}
+
+.post {
+	width: 100%;
+	height: auto;
+	display: inline;
+}
+
+	.post img {
+		width: 100%;
+	}
+
+	.post #post-title {
+		color: #fff;
+		margin-bottom: 30px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #ccc;
+	}
+
+	.post #post-content {
+		color: #ddd;
+	}
+
+	.post #post-content p {
+		padding: 10px 20px;
+		background: #aaa;
+		color: #000;
+	}
+
+	.post a {
+		text-decoration: underline;
+		color: #fff;
+	}
+
+.post-item {
+	margin: 10px;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background-color: #ddd;
+}
+
+.post-item a {
+	width: 100%;
+}
+
+.post-item img {
+	width: 100%;
+	border-radius: 4px 4px 0px 0px;
+}
+	
+	.post-item .info {
+		width: 100%;
+		padding: 10px;
+	}
+
+	.post-item.info h2 {
+		font-size: 18px;
+		width: 100%;
+	}
+
+.list {
+	padding: 0;
+	margin: 0;
+}
+
+.line {
+	border-bottom: 1px solid #555;
+	box-shadow: 0 1px 0 #202020;
+}
+
+.list .list-title {
+	padding: 10px 20px;
+	margin: 0;
+	font-weight: 200;
+}
+
+.settings-list {
+	width: 100%;
+	padding: 10px 0px;
+	list-style: none;
+	color: #fff;
+}
+
+.settings-item {
+	margin: 0;
+	display: inline-block;
+	width: 100%;
+	border-top: 1px solid #444;
+	padding: 10px 20px;
+}
+
+.settings-item input {
+	color: #000;
+	max-width: 60%;
+	margin: 0;
+}
+
+.settings-item a {
+	color: #fff;
+	font-weight: 100;
+}
+
+.settings-item:last-child {
+	border-bottom: 1px solid #444;
+}
+
+.padded {
+	padding: 20px;
+}
+
+/* Landscape */
+@media only screen and (min-width: 480px) {
+
+	.posts {
+		width: 100%;
+		margin-top: 44px;
+	}
+
+	.post-item {
+		min-width: 47%;
+		max-width: 47%;
+		float: left;
+	}
+
+		.post-item.info h2 {
+			font-size: 12px;
+			width: 100%;
+		}
+
+}

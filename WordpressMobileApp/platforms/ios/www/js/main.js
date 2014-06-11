@@ -2,96 +2,75 @@
  * Main Application Controller
  * @type Object
  */
-var app = {
-
-	/**
-	 * What happens upon the loading of the app
-	 */
-	init: function(callback) {
-		window.location.hash = "";
-		this.detailsUrl = /^#post(\d+)/;
-		this.registerEvents();
-
-		this.store = new Posts(function() {
-			$('body').html(new HomeView(app.store).render().el);
-		});
-
-		callback();
-	},
+var Main = function() {
 	
-	/**
-	 * Show a native alert or a web version if not supported
-	 * @param  String 	message 	The message in the alert
-	 * @param  String	title   	The title of the alert
-	 */
-	showAlert: function (message, title) {
-		if (navigator.notification) {
-			navigator.notification.alert(message, null, title, 'OK');
-		} else {
-			alert(title ? (title + ": " + message) : message);
-		}
-	},
+	var self = this;
+	// Application config data
+	this.conf = {
+		title: "Craig's Blog",
+		routes: new Patterns(this)	
+	};
 
 	/**
-	 * Setup which events we're listening out for
+	 * The constructor of the main application
 	 */
-	registerEvents: function() {
+	this.init = function() {
+		window.location.hash = "";
+
+		this.store = new DataStore(function() {
+
+			// Once the datastore has been loaded
+			// Start loading the views.
+			self.updateView();
+		});
+	};
+
+	/**
+	 * Register the events for the app
+	 */
+	this.registerEvents = function() {
 		document.addEventListener("offline", this.onOffline, false);
 		document.addEventListener("backbutton", this.onBackPressed, false);
-		document.addEventListener("deviceready", this.onDeviceReady, false);
 
 		// Handle routes
-		$(window).on('hashchange', $.proxy(this.route, this));
-	},
-
-	/**
-	 * Handle some application routes, we need to know what
-	 * we're looking out for
-	 */
-	route: function() {
-		var hash = window.location.hash;
-
-		if(!hash) {
-			$('body').html(new HomeView(this.store).render().el);
-			$('.content').hide().fadeIn();
-			//$('.content').hide().slideToggle("slow");
-			//$('.content').hide().toggle("slide", {direction:"up"}, 200);
-			return;
-		}
-
-		var match = hash.match(app.detailsUrl);
-		if(match) {
-			app.store.getById(Number(match[1]), function(post) {
-				$('body').html(new PostView(post).render().el);
-				$('.content').hide().fadeIn();
-				//$('.content').hide().slideToggle("slow");
-				//$('.content').hide().toggle("slide", {direction:"down"}, 200);
-			});
-		}
-	},
+		$(window).on('hashchange', $.proxy(this.updateView, this));
+		return this;
+	};
 
 	/**
 	 * What happens when the device is offline
 	 */
-	onOffline: function() {
+	this.onOffline = function() {
 		this.showAlert("You are not connected to the internet!", "No Internet");
-	},
+	};
 
 	/**
 	 * When the device's back button is pressed
 	 */
-	onBackPressed: function() {
+	this.onBackPressed = function() {
+		// Go back to the main page, can configure to
+		// work with different app hierarchies.
 		if(window.location.hash != "") {
 			window.location.hash = "";
+		} else {
+			navigator.app.exitApp();
 		}
-	},
+	};
 
-	/**	
-	 * Called when the device is ready
+	/**
+	 * Called when the view needs to be updated
+	 * @return {Main} Return itself
 	 */
-	onDeviceReady: function() {
-		console.log("devide ready");
-	}
+	this.updateView = function() {
 
+		// Run our router
+		new Router(this.store, this.conf.routes, new Routes(this), function() {
+			// this is called once the route has been determined
+			$('.snap-drawers').hide();
+			$('#content').hide().fadeIn(function() {
+				$('.snap-drawers').show();
+			});
+			$('.hidden').hide();
+		});
+	};
 };
-

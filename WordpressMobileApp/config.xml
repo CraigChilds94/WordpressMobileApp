@@ -3,16 +3,27 @@
 		version="0.0.1" 
 		xmlns="http://www.w3.org/ns/widgets" 
 		xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    
-    <name>WordpressMobileApp</name>
-    
-    <description>
-        A basic application which grabs a Wordpress feed and displays the results
-    </description>
+	
+	<name>WordpressMobileApp</name>
+	
+	<description>
+		A basic application which grabs a Wordpress feed and displays the results
+	</description>
+	
+	<preference name="SplashScreen" value="splash" />
+	<preference name="SplashScreenDelay" value="10000" />
 
-    <author email="dev@tannwestlake.com" href="http://tannwestlake.com">
-        Tann Westlake
-    </author>
-    <content src="index.html" />
-    <access origin="*" />
+	<author email="dev@tannwestlake.com" href="http://tannwestlake.com">
+		Tann Westlake
+	</author>
+	<content src="index.html" />
+	<access origin="*" />
+	<feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="LocalNotification">
+        <param name="ios-package" onload="true" value="APPLocalNotification" />
+        <param name="onload" value="true" />
+    </feature>
+    <plugin name="LocalNotification" value="LocalNotification" />
 </widget>

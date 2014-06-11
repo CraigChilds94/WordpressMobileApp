@@ -19,6 +19,30 @@
                         {
                             "xml": "<preference name=\"StatusBarBackgroundColor\" value=\"#000000\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SocialMessage\"><param name=\"ios-package\" value=\"SocialMessage\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
+                            "count": 1
+                        }
+                    ]
+                }
+            },
+            "framework": {
+                "parents": {
+                    "Social.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
+                        }
+                    ],
+                    "CoreGraphics.framework": [
+                        {
+                            "xml": "false",
+                            "count": 1
                         }
                     ]
                 }
@@ -27,6 +51,12 @@
     },
     "installed_plugins": {
         "org.apache.cordova.statusbar": {
+            "PACKAGE_NAME": "com.tannwestlake.wpmobile"
+        },
+        "uk.co.ilee.socialmessage": {
+            "PACKAGE_NAME": "com.tannwestlake.wpmobile"
+        },
+        "org.apache.cordova.splashscreen": {
             "PACKAGE_NAME": "com.tannwestlake.wpmobile"
         }
     },

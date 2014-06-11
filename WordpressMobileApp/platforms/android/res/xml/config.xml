@@ -5,13 +5,29 @@
     <feature name="App">
         <param name="android-package" value="org.apache.cordova.App" />
     </feature>
+    <feature name="SocialMessage">
+        <param name="android-package" value="uk.co.ilee.socialmessage.SocialMessage" />
+    </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
     <name>WordpressMobileApp</name>
     <description>
-        A basic application which grabs a Wordpress feed and displays the results
-    </description>
+		A basic application which grabs a Wordpress feed and displays the results
+	</description>
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="10000" />
     <author email="dev@tannwestlake.com" href="http://tannwestlake.com">
-        Tann Westlake
-    </author>
+		Tann Westlake
+	</author>
     <content src="index.html" />
     <access origin="*" />
+    <feature name="Device">
+        <param name="ios-package" value="CDVDevice" />
+    </feature>
+    <feature name="LocalNotification">
+        <param name="ios-package" onload="true" value="APPLocalNotification" />
+        <param name="onload" value="true" />
+    </feature>
+    <plugin name="LocalNotification" value="LocalNotification" />
 </widget>
