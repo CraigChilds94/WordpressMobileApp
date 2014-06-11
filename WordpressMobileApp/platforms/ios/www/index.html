@@ -184,14 +184,8 @@
 
 			if(navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|IEMobile)/)) {
 				document.addEventListener("deviceready", function() {
-					
-					navigator.splashscreen.show();
-					setTimeout(function() {
-						navigator.splashscreen.hide();
-						StatusBar.overlaysWebView(false);
-						run();
-					}, 2000);
-
+					StatusBar.overlaysWebView(false);
+					run();
 				}, true);
 			} else {
 				run();
