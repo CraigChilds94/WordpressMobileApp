@@ -86,7 +86,7 @@ var DataStore = function(callback) {
 	 * @return String  		A string format of the json encoded data
 	 */
 	this._reload = function(notifications) {
-		var posts;
+		var posts = JSON.parse(window.localStorage.getItem("posts"));
 		
 		$.ajaxSetup({'async' : false});
 		$.getJSON(url, function(data) {
