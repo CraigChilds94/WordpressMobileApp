@@ -41,6 +41,7 @@
 		B5491DCD860D4276B78C03E1 /* CDVStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = A8396D036E764D1587C2481F /* CDVStatusBar.m */; };
 		B0B438320279425CBDD55C33 /* SocialMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8645FC47E64370AE2658F1 /* SocialMessage.m */; };
 		7B3A7084BAFE4147A37AE065 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAF53AF06C84C4F84FF070C /* Social.framework */; };
+		CD91676C84B74086A93B3FFF /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9AD36BE4964E71A9A384C7 /* CDVSplashScreen.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -110,6 +111,8 @@
 		CA8645FC47E64370AE2658F1 /* SocialMessage.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "SocialMessage.m"; path = "uk.co.ilee.socialmessage/SocialMessage.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		8C3F68F4C48043EC9E4159B6 /* SocialMessage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SocialMessage.h"; path = "uk.co.ilee.socialmessage/SocialMessage.h"; sourceTree = "<group>"; fileEncoding = 4; };
 		3FAF53AF06C84C4F84FF070C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Social.framework"; path = "System/Library/Frameworks/Social.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		EB9AD36BE4964E71A9A384C7 /* CDVSplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVSplashScreen.m"; path = "org.apache.cordova.splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		B67540AAD0434548AFE4E3AD /* CDVSplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVSplashScreen.h"; path = "org.apache.cordova.splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +239,8 @@
 				DB5B1927B076418D9A7FC8D2 /* CDVStatusBar.h */,
 				CA8645FC47E64370AE2658F1 /* SocialMessage.m */,
 				8C3F68F4C48043EC9E4159B6 /* SocialMessage.h */,
+				EB9AD36BE4964E71A9A384C7 /* CDVSplashScreen.m */,
+				B67540AAD0434548AFE4E3AD /* CDVSplashScreen.h */,
 			);
 			name = Plugins;
 			path = WordpressMobileApp/Plugins;
@@ -432,6 +437,7 @@
 				302D95F114D2391D003F00A1 /* MainViewController.m in Sources */,
 				B5491DCD860D4276B78C03E1 /* CDVStatusBar.m in Sources */,
 				B0B438320279425CBDD55C33 /* SocialMessage.m in Sources */,
+				CD91676C84B74086A93B3FFF /* CDVSplashScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

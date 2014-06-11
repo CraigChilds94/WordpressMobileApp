@@ -11,6 +11,10 @@
                         {
                             "xml": "<feature name=\"SocialMessage\"><param name=\"android-package\" value=\"uk.co.ilee.socialmessage.SocialMessage\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -32,6 +36,9 @@
             "PACKAGE_NAME": "com.tannwestlake.wpmobile"
         },
         "uk.co.ilee.socialmessage": {
+            "PACKAGE_NAME": "com.tannwestlake.wpmobile"
+        },
+        "org.apache.cordova.splashscreen": {
             "PACKAGE_NAME": "com.tannwestlake.wpmobile"
         }
     },

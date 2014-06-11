@@ -1,5 +1,6 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/WordpressMobileApp.ap_ \
  : /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/drawable/icon.png \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/drawable/screen.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/drawable-hdpi/icon.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/drawable-land-hdpi/screen.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/drawable-land-ldpi/screen.png \
@@ -15,6 +16,7 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/values/strings.xml \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/xml/config.xml \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/res/drawable/icon.png \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/res/drawable/screen.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/res/drawable-hdpi/icon.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/res/drawable-land-hdpi/screen.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/res/drawable-land-ldpi/screen.png \
@@ -37,6 +39,7 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/index.html \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/screen \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/css/app.css \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/css/custom.css \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/css/ratchet.min.css \
@@ -71,10 +74,17 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/view/gallery.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/view/home.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/view/post.js \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.statusbar \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/uk.co.ilee.socialmessage \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www/splashscreen.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www/statusbar.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/uk.co.ilee.socialmessage/www \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/uk.co.ilee.socialmessage/www/socialmessage.js \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/screen/screen-hdpi.png \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/screen/screen-ldpi.png \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/screen/screen-mdpi.png \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/screen/screen-xhdpi.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/AndroidManifest.xml \

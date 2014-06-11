@@ -107,9 +107,7 @@ var DataStore = function(callback) {
 				window.localStorage.setItem("posts", JSON.stringify(posts));
 				self.callLater(callback, self);
 
-				if(window.plugin != undefined) {
-					window.plugin.notification.local.add({message: 'The feed has been updated.'});
-				}
+				window.plugin.notification.local.add({message: 'The feed has been updated.'});
 			}
 		});
 

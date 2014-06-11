@@ -1,5 +1,6 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-gen/com/tannwestlake/wpmobile/R.java \
  : /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/drawable/icon.png \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/drawable/screen.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/drawable-hdpi/icon.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/drawable-land-hdpi/screen.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/drawable-land-ldpi/screen.png \
@@ -15,6 +16,7 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/values/strings.xml \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/res/xml/config.xml \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/res/drawable/icon.png \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/res/drawable/screen.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/res/drawable-hdpi/icon.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/res/drawable-land-hdpi/screen.png \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/ant-build/res/drawable-land-ldpi/screen.png \

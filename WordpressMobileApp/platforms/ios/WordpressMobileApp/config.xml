@@ -27,10 +27,16 @@
     <feature name="SocialMessage">
         <param name="ios-package" value="SocialMessage" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="ios-package" value="CDVSplashScreen" />
+        <param name="onload" value="true" />
+    </feature>
     <name>WordpressMobileApp</name>
     <description>
 		A basic application which grabs a Wordpress feed and displays the results
 	</description>
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="10000" />
     <author email="dev@tannwestlake.com" href="http://tannwestlake.com">
 		Tann Westlake
 	</author>
