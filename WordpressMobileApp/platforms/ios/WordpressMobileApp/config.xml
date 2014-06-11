@@ -50,4 +50,7 @@
         <param name="onload" value="true" />
     </feature>
     <plugin name="LocalNotification" value="LocalNotification" />
+    <feature name="UniversalAnalytics">
+        <param name="ios-package" value="UniversalAnalyticsPlugin" />
+    </feature>
 </widget>

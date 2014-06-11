@@ -15,6 +15,10 @@
                         {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"UniversalAnalytics\"><param name=\"android-package\" value=\"com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -24,6 +28,14 @@
                     "/*": [
                         {
                             "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.INTERNET\" />",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
                             "count": 1
                         }
                     ]
@@ -39,6 +51,9 @@
             "PACKAGE_NAME": "com.tannwestlake.wpmobile"
         },
         "org.apache.cordova.splashscreen": {
+            "PACKAGE_NAME": "com.tannwestlake.wpmobile"
+        },
+        "com.danielcwilson.plugins.googleanalytics": {
             "PACKAGE_NAME": "com.tannwestlake.wpmobile"
         }
     },

@@ -42,6 +42,12 @@
 		B0B438320279425CBDD55C33 /* SocialMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8645FC47E64370AE2658F1 /* SocialMessage.m */; };
 		7B3A7084BAFE4147A37AE065 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAF53AF06C84C4F84FF070C /* Social.framework */; };
 		CD91676C84B74086A93B3FFF /* CDVSplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = EB9AD36BE4964E71A9A384C7 /* CDVSplashScreen.m */; };
+		20DD1CCE68AA4E1B8CDDCD6D /* UniversalAnalyticsPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 025595E8AE1D4077843420E0 /* UniversalAnalyticsPlugin.m */; };
+		08CBA0A7C58C476A9132F8EA /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 016F44ED2E0B427384FCD07C /* libGoogleAnalyticsServices.a */; };
+		B8BCFE33A77049BAAAD61982 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A307BA46444E41A2BF8C8C24 /* SystemConfiguration.framework */; };
+		D9CF36D40DCC45F3820E3AE2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5E4695BB5E4579AC1F1AFC /* CoreData.framework */; };
+		C4FC08AD146241618549D1F9 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C6D975E3EFA843339B8B2648 /* libz.dylib */; };
+		F8FD54040FB34951ADA938DF /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 49055FE458FC491AA369EF8F /* libsqlite3.0.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +119,19 @@
 		3FAF53AF06C84C4F84FF070C /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Social.framework"; path = "System/Library/Frameworks/Social.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
 		EB9AD36BE4964E71A9A384C7 /* CDVSplashScreen.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "CDVSplashScreen.m"; path = "org.apache.cordova.splashscreen/CDVSplashScreen.m"; sourceTree = "<group>"; fileEncoding = 4; };
 		B67540AAD0434548AFE4E3AD /* CDVSplashScreen.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "CDVSplashScreen.h"; path = "org.apache.cordova.splashscreen/CDVSplashScreen.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		025595E8AE1D4077843420E0 /* UniversalAnalyticsPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UniversalAnalyticsPlugin.m"; path = "com.danielcwilson.plugins.googleanalytics/UniversalAnalyticsPlugin.m"; sourceTree = "<group>"; fileEncoding = 4; };
+		016F44ED2E0B427384FCD07C /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libGoogleAnalyticsServices.a"; path = "WordpressMobileApp/Plugins/com.danielcwilson.plugins.googleanalytics/libGoogleAnalyticsServices.a"; sourceTree = "<group>"; fileEncoding = 4; };
+		74BB00D19AF74612AA3BAAB8 /* UniversalAnalyticsPlugin.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UniversalAnalyticsPlugin.h"; path = "com.danielcwilson.plugins.googleanalytics/UniversalAnalyticsPlugin.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		5AA255A3D4584C148B767771 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GAIDictionaryBuilder.h"; path = "com.danielcwilson.plugins.googleanalytics/GAIDictionaryBuilder.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		E159634793134004B8269914 /* GAIFields.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GAIFields.h"; path = "com.danielcwilson.plugins.googleanalytics/GAIFields.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		E83F0B32E8FB4D76A9BC480A /* GAILogger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GAILogger.h"; path = "com.danielcwilson.plugins.googleanalytics/GAILogger.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		49E6BB3151AC456083962A5D /* GAITrackedViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GAITrackedViewController.h"; path = "com.danielcwilson.plugins.googleanalytics/GAITrackedViewController.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		7F4172054D154E79A4AD4DFA /* GAI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GAI.h"; path = "com.danielcwilson.plugins.googleanalytics/GAI.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		AE791E51A7F84D18B8A87014 /* GAITracker.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "GAITracker.h"; path = "com.danielcwilson.plugins.googleanalytics/GAITracker.h"; sourceTree = "<group>"; fileEncoding = 4; };
+		A307BA46444E41A2BF8C8C24 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "SystemConfiguration.framework"; path = "System/Library/Frameworks/SystemConfiguration.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		4E5E4695BB5E4579AC1F1AFC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreData.framework"; path = "System/Library/Frameworks/CoreData.framework"; sourceTree = SDKROOT; fileEncoding = 4; };
+		C6D975E3EFA843339B8B2648 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libz.dylib"; path = "usr/lib/libz.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
+		49055FE458FC491AA369EF8F /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsqlite3.0.dylib"; path = "usr/lib/libsqlite3.0.dylib"; sourceTree = SDKROOT; fileEncoding = 4; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +145,11 @@
 				305D5FD1115AB8F900A74A75 /* MobileCoreServices.framework in Frameworks */,
 				5AEE5B35173C68D80009041E /* CoreLocation.framework in Frameworks */,
 				7B3A7084BAFE4147A37AE065 /* Social.framework in Frameworks */,
+				08CBA0A7C58C476A9132F8EA /* libGoogleAnalyticsServices.a in Frameworks */,
+				B8BCFE33A77049BAAAD61982 /* SystemConfiguration.framework in Frameworks */,
+				D9CF36D40DCC45F3820E3AE2 /* CoreData.framework in Frameworks */,
+				C4FC08AD146241618549D1F9 /* libz.dylib in Frameworks */,
+				F8FD54040FB34951ADA938DF /* libsqlite3.0.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +244,11 @@
 				288765FC0DF74451002DB57D /* CoreGraphics.framework */,
 				305D5FD0115AB8F900A74A75 /* MobileCoreServices.framework */,
 				3FAF53AF06C84C4F84FF070C /* Social.framework */,
+				016F44ED2E0B427384FCD07C /* libGoogleAnalyticsServices.a */,
+				A307BA46444E41A2BF8C8C24 /* SystemConfiguration.framework */,
+				4E5E4695BB5E4579AC1F1AFC /* CoreData.framework */,
+				C6D975E3EFA843339B8B2648 /* libz.dylib */,
+				49055FE458FC491AA369EF8F /* libsqlite3.0.dylib */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,6 +270,14 @@
 				8C3F68F4C48043EC9E4159B6 /* SocialMessage.h */,
 				EB9AD36BE4964E71A9A384C7 /* CDVSplashScreen.m */,
 				B67540AAD0434548AFE4E3AD /* CDVSplashScreen.h */,
+				025595E8AE1D4077843420E0 /* UniversalAnalyticsPlugin.m */,
+				74BB00D19AF74612AA3BAAB8 /* UniversalAnalyticsPlugin.h */,
+				5AA255A3D4584C148B767771 /* GAIDictionaryBuilder.h */,
+				E159634793134004B8269914 /* GAIFields.h */,
+				E83F0B32E8FB4D76A9BC480A /* GAILogger.h */,
+				49E6BB3151AC456083962A5D /* GAITrackedViewController.h */,
+				7F4172054D154E79A4AD4DFA /* GAI.h */,
+				AE791E51A7F84D18B8A87014 /* GAITracker.h */,
 			);
 			name = Plugins;
 			path = WordpressMobileApp/Plugins;
@@ -438,6 +475,7 @@
 				B5491DCD860D4276B78C03E1 /* CDVStatusBar.m in Sources */,
 				B0B438320279425CBDD55C33 /* SocialMessage.m in Sources */,
 				CD91676C84B74086A93B3FFF /* CDVSplashScreen.m in Sources */,
+				20DD1CCE68AA4E1B8CDDCD6D /* UniversalAnalyticsPlugin.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -517,6 +555,10 @@
 				);
 				PRODUCT_NAME = WordpressMobileApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/WordpressMobileApp/Plugins/com.danielcwilson.plugins.googleanalytics\"",
+				);
 			};
 			name = Debug;
 		};
@@ -548,6 +590,10 @@
 				);
 				PRODUCT_NAME = WordpressMobileApp;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/WordpressMobileApp/Plugins/com.danielcwilson.plugins.googleanalytics\"",
+				);
 			};
 			name = Release;
 		};

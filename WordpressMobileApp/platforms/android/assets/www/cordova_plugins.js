@@ -20,6 +20,13 @@ module.exports = [
         "clobbers": [
             "navigator.splashscreen"
         ]
+    },
+    {
+        "file": "plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js",
+        "id": "com.danielcwilson.plugins.googleanalytics.UniversalAnalytics",
+        "clobbers": [
+            "analytics"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -27,7 +34,8 @@ module.exports.metadata =
 {
     "org.apache.cordova.statusbar": "0.1.3",
     "uk.co.ilee.socialmessage": "0.2.6",
-    "org.apache.cordova.splashscreen": "0.3.0"
+    "org.apache.cordova.splashscreen": "0.3.0",
+    "com.danielcwilson.plugins.googleanalytics": "0.5.0"
 }
 // BOTTOM OF METADATA
 });
