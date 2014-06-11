@@ -8,10 +8,15 @@
     <feature name="SocialMessage">
         <param name="android-package" value="uk.co.ilee.socialmessage.SocialMessage" />
     </feature>
+    <feature name="SplashScreen">
+        <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+    </feature>
     <name>WordpressMobileApp</name>
     <description>
 		A basic application which grabs a Wordpress feed and displays the results
 	</description>
+    <preference name="SplashScreen" value="splash" />
+    <preference name="SplashScreenDelay" value="10000" />
     <author email="dev@tannwestlake.com" href="http://tannwestlake.com">
 		Tann Westlake
 	</author>
