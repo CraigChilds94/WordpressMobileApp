@@ -11,6 +11,9 @@
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
     </feature>
+    <feature name="UniversalAnalytics">
+        <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
+    </feature>
     <name>WordpressMobileApp</name>
     <description>
 		A basic application which grabs a Wordpress feed and displays the results
@@ -30,7 +33,4 @@
         <param name="onload" value="true" />
     </feature>
     <plugin name="LocalNotification" value="LocalNotification" />
-    <feature name="UniversalAnalytics">
-        <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
-    </feature>
 </widget>

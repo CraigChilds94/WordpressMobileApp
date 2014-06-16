@@ -31,6 +31,9 @@
         <param name="ios-package" value="CDVSplashScreen" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="UniversalAnalytics">
+        <param name="ios-package" value="UniversalAnalyticsPlugin" />
+    </feature>
     <name>WordpressMobileApp</name>
     <description>
 		A basic application which grabs a Wordpress feed and displays the results
@@ -50,7 +53,4 @@
         <param name="onload" value="true" />
     </feature>
     <plugin name="LocalNotification" value="LocalNotification" />
-    <feature name="UniversalAnalytics">
-        <param name="ios-package" value="UniversalAnalyticsPlugin" />
-    </feature>
 </widget>

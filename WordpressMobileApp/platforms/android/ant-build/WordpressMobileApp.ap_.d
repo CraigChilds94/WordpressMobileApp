@@ -59,6 +59,7 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/storage \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/view \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/helpers/helper.js \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/lib/fastclick.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/lib/hammer.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/lib/handlebars.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/lib/jquery.js \
@@ -74,9 +75,12 @@
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/view/gallery.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/view/home.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/js/view/post.js \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.statusbar \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/uk.co.ilee.socialmessage \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics/www \
+/Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/com.danielcwilson.plugins.googleanalytics/www/analytics.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.splashscreen/www/splashscreen.js \
 /Users/craig/Projects/WordpressMobileApp/WordpressMobileApp/platforms/android/assets/www/plugins/org.apache.cordova.statusbar/www \

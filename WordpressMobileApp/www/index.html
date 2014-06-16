@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Craig Childs</title>
-		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
 		<meta name="apple-touch-fullscreen" content="yes">
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		
@@ -154,7 +154,7 @@
 		<!-- load the lib scripts -->
 		<script src="js/lib/jquery.js"></script>
 		<script src="js/lib/handlebars.js"></script>
-		<!--<script src="js/lib/touche.js"></script>-->
+		<script src="js/lib/fastclick.js"></script>
 		<script src="js/lib/snap.js"></script>
 		<script src="js/lib/slides.js"></script>
 
@@ -179,6 +179,7 @@
 
 			function run() {
 				//Helper.showAlert("123", "as");
+				FastClick.attach(document.body);
 				new Main().registerEvents().init();
 			}
 
