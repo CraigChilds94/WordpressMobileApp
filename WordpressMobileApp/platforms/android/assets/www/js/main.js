@@ -32,6 +32,9 @@ var Main = function() {
 		document.addEventListener("offline", this.onOffline, false);
 		document.addEventListener("backbutton", this.onBackPressed, false);
 
+		// Update/refresh the page based on any changes to local storage
+		window.addEventListener("storage", $.proxy(this.updateView, this), false);
+
 		// Handle routes
 		$(window).on('hashchange', $.proxy(this.updateView, this));
 		return this;
